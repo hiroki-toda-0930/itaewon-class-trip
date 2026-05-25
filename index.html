@@ -507,7 +507,13 @@
   }
   .stop-body {
     padding: 14px 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
+  .stop-body > .stop-name,
+  .stop-body > .stop-tags,
+  .stop-body > .stop-desc { align-self: stretch; }
   .stop-name {
     font-size: 15px;
     font-weight: 900;
@@ -537,10 +543,12 @@
   }
   /* Spot detail CTA button - prominent, distinct from tags */
   a.spot-cta-btn {
+    order: 99;
+    align-self: flex-start;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 10px;
+    margin-top: 14px;
     background: var(--yellow);
     color: var(--navy);
     border: 2px solid var(--navy);
