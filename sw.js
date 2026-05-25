@@ -1,12 +1,26 @@
 // Service Worker for 梨泰院クラス聖地巡礼 旅のしおり
-const CACHE = 'itaewon-trip-v1';
+const CACHE = 'itaewon-trip-v2';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',
-  './apple-touch-icon.png'
+  './apple-touch-icon.png',
+  './spots/style.css',
+  './spots/world-gourmet-street.html',
+  './spots/jacks-bar.html',
+  './spots/kkulbam.html',
+  './spots/noksapyeong-bridge.html',
+  './spots/club-pumpkin.html',
+  './spots/g-guesthouse.html',
+  './spots/seoulpam.html',
+  './spots/itaewon-park.html',
+  './spots/plain-note.html',
+  './spots/oriole.html',
+  './spots/sky-tower-namsan.html',
+  './spots/baekak.html',
+  './spots/nandong-konkoro.html'
 ];
 
 self.addEventListener('install', (e) => {
