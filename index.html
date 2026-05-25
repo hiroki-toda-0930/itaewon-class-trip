@@ -535,35 +535,47 @@
     text-decoration-color: var(--yellow);
     background: var(--yellow);
   }
-  /* Spot detail CTA chip in stop-tags */
-  a.tag.spot-detail {
-    background: var(--pink);
-    color: var(--paper);
-    border-color: var(--navy);
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    font-weight: 900;
-    cursor: pointer;
+  /* Spot detail CTA button - prominent, distinct from tags */
+  a.spot-cta-btn {
     display: inline-flex;
     align-items: center;
-    gap: 2px;
-    transition: all 0.15s;
-  }
-  a.tag.spot-detail:hover {
+    gap: 6px;
+    margin-top: 10px;
     background: var(--yellow);
     color: var(--navy);
-    transform: translateY(-1px);
-    box-shadow: 2px 2px 0 var(--navy);
+    border: 2px solid var(--navy);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    padding: 7px 14px 7px 12px;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 var(--navy);
+    transition: transform 0.12s, box-shadow 0.12s, background 0.15s, color 0.15s;
   }
-  a.tag.spot-detail::after {
+  a.spot-cta-btn::before {
+    content: "📖";
+    font-size: 15px;
+    line-height: 1;
+  }
+  a.spot-cta-btn::after {
     content: "→";
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 900;
     margin-left: 2px;
     transition: transform 0.15s;
   }
-  a.tag.spot-detail:hover::after {
-    transform: translateX(2px);
+  a.spot-cta-btn:hover {
+    background: var(--pink);
+    color: var(--paper);
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--navy);
+  }
+  a.spot-cta-btn:hover::after {
+    transform: translateX(3px);
+  }
+  a.spot-cta-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--navy);
   }
   /* inline spot links in description */
   .stop-desc a.spot-link {
@@ -1557,7 +1569,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/world-gourmet-street.html">世界グルメ文化通り</a><small>ハミルトン裏</small></div>
-            <div class="stop-tags"><span class="tag pink">EP.2 ロケ地</span><span class="tag">徒歩1分</span><a class="tag spot-detail" href="spots/world-gourmet-street.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag pink">EP.2 ロケ地</span><span class="tag">徒歩1分</span></div>
+            <a class="spot-cta-btn" href="spots/world-gourmet-street.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               <strong>セロイがハロウィンの日にスアと偶然再会した場所。</strong>各国料理店が並ぶ通りで、夜にはネオンが灯り異国情緒たっぷり。日が落ち始める時間がベスト。
             </div>
@@ -1584,7 +1597,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/jacks-bar.html">JACK'S BAR｜天使の羽の壁</a><small>梨泰院駅徒歩すぐ</small></div>
-            <div class="stop-tags"><span class="tag purple">最終回 ロケ地</span><span class="tag yellow">PHOTO SPOT</span><a class="tag spot-detail" href="spots/jacks-bar.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag purple">最終回 ロケ地</span><span class="tag yellow">PHOTO SPOT</span></div>
+            <a class="spot-cta-btn" href="spots/jacks-bar.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               最終回でセロイとイソが写真を撮りあっていた、<strong>翼の壁画の前</strong>。2人で羽の前に立ってツーショットを撮るのが定番。夜のJACK'S BARでは無料ゲームマシンも遊べる。
             </div>
@@ -1611,7 +1625,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/kkulbam.html">クルバムポチャ（꿀밤포차）</a><small>原作者・脚本家のお店</small></div>
-            <div class="stop-tags"><span class="tag pink">DINNER</span><span class="tag yellow">タンバムのモデル</span><a class="tag spot-detail" href="spots/kkulbam.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag pink">DINNER</span><span class="tag yellow">タンバムのモデル</span></div>
+            <a class="spot-cta-btn" href="spots/kkulbam.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               ドラマには登場しないが、<strong>原作漫画家＆脚本家が経営する居酒屋</strong>。「HONEY NIGHT」のネオン看板、店内にはセロイとスアの壁画。メニューにもキャラ。<strong>タンバムの実モデル</strong>。初日の夕食はここで原作リスペクト。
             </div>
@@ -1678,7 +1693,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/noksapyeong-bridge.html">緑莎坪（ノクサピョン）陸橋</a><small>セロイ思考の場所</small></div>
-            <div class="stop-tags"><span class="tag yellow">★ MUST</span><span class="tag pink">早朝推奨</span><span class="tag">写真◎</span><a class="tag spot-detail" href="spots/noksapyeong-bridge.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag yellow">★ MUST</span><span class="tag pink">早朝推奨</span><span class="tag">写真◎</span></div>
+            <a class="spot-cta-btn" href="spots/noksapyeong-bridge.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               <strong>セロイが一人で考え事をし、イソと真面目な話をした、ドラマで何度も登場する陸橋。</strong>橋の中央からNソウルタワーが正面に。<strong>早朝7:30は人が少なく順光で写真ベスト</strong>。日中は暑く観光客も増える。
             </div>
@@ -1754,7 +1770,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/seoulpam.html">ソウルバム（旧タンバム1号店）</a><small>★ ランチ</small></div>
-            <div class="stop-tags"><span class="tag yellow">EP.1〜 ロケ地</span><span class="tag pink">劇中メニュー</span><a class="tag spot-detail" href="spots/seoulpam.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag yellow">EP.1〜 ロケ地</span><span class="tag pink">劇中メニュー</span></div>
+            <a class="spot-cta-btn" href="spots/seoulpam.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               タンバム移転前の店舗が現在「ソウルバム」という飲食店に。<strong>劇中のスンドゥブチゲ＋豚もやし炒めセットメニュー</strong>を提供。店外には「梨泰院クラスのロケ地」看板。<strong>ここで食べると体験密度が一気に跳ね上がる</strong>。
             </div>
@@ -1808,7 +1825,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/itaewon-park.html">梨泰院児童公園</a><small>パンダ滑り台</small></div>
-            <div class="stop-tags"><span class="tag mint">EP.5 ロケ地</span><span class="tag yellow">フォトスポット</span><a class="tag spot-detail" href="spots/itaewon-park.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag mint">EP.5 ロケ地</span><span class="tag yellow">フォトスポット</span></div>
+            <a class="spot-cta-btn" href="spots/itaewon-park.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               セロイがグンスを慰めた場所、カン専務と元刑事のおじさんの娘が出会った場所。<strong>パンダ型の遊具が異様な存在感</strong>。子供じゃなくても写真は撮りたくなる。
             </div>
@@ -1836,7 +1854,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/plain-note.html">Plain Note｜スアの学生時代の家</a><small>解放村</small></div>
-            <div class="stop-tags"><span class="tag mint">EP.2 ロケ地</span><span class="tag">外観のみ</span><a class="tag spot-detail" href="spots/plain-note.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag mint">EP.2 ロケ地</span><span class="tag">外観のみ</span></div>
+            <a class="spot-cta-btn" href="spots/plain-note.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               実際はウェディング写真の撮影スタジオ。<strong>セロイがスアをおんぶして上がった、あの階段を実際に歩く</strong>のがハイライト。中には入れないが、ピンクの門の前で写真。営業中のお店なので撮影は短時間で。
             </div>
@@ -1871,7 +1890,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/oriole.html">Oriole｜タンバム（移転後）</a><small>★ DINNER &amp; NIGHT VIEW</small></div>
-            <div class="stop-tags"><span class="tag yellow">★ MUST</span><span class="tag pink">DINNER</span><span class="tag purple">EP.中盤 ロケ地</span><a class="tag spot-detail" href="spots/oriole.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag yellow">★ MUST</span><span class="tag pink">DINNER</span><span class="tag purple">EP.中盤 ロケ地</span></div>
+            <a class="spot-cta-btn" href="spots/oriole.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               タンバム移転後の店舗ロケ地。<strong>1階カフェ、2階バー、3階ルーフトップ</strong>の3層構造。<strong>解放村の高台からNソウルタワーを正面に見る夜景は今回の旅のハイライト</strong>。お店の目の前の階段も劇中シーン。<strong>事前予約推奨</strong>（Instagram DM: @oriole_bar）。
             </div>
@@ -1965,7 +1985,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/sky-tower-namsan.html">ステートタワー南山｜長家本社</a><small>明洞駅徒歩2分</small></div>
-            <div class="stop-tags"><span class="tag">長家(チャンガ)本社</span><a class="tag spot-detail" href="spots/sky-tower-namsan.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag">長家(チャンガ)本社</span></div>
+            <a class="spot-cta-btn" href="spots/sky-tower-namsan.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               スアの勤務先、チャン会長の登場シーンで出てくる長家本社ビル。<strong>多くの韓ドラのロケ地でもある人気スポット</strong>。外観だけだが、明洞駅すぐで立ち寄りやすい。
             </div>
@@ -1992,7 +2013,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/baekak.html">白凡（ペッボム）広場</a><small>会賢駅徒歩8分</small></div>
-            <div class="stop-tags"><span class="tag coral">最終回 ロケ地</span><span class="tag">CITY WALL</span><a class="tag spot-detail" href="spots/baekak.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag coral">最終回 ロケ地</span><span class="tag">CITY WALL</span></div>
+            <a class="spot-cta-btn" href="spots/baekak.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               <strong>最終回でセロイとイソが初キスをした城壁の階段</strong>。城郭の向こうにNソウルタワーを望む絶景スポット。緑の芝生と城壁沿いの散策道。明洞から徒歩圏。
             </div>
@@ -2117,7 +2139,8 @@
           </div>
           <div class="stop-body">
             <div class="stop-name"><a href="spots/nandong-konkoro.html">マンマンココロ 弘大店</a><small>長家・梨泰院店の外観ロケ地</small></div>
-            <div class="stop-tags"><span class="tag yellow">EP.中盤 ロケ地</span><span class="tag pink">DINNER</span><span class="tag purple">施術後ケア</span><a class="tag spot-detail" href="spots/nandong-konkoro.html">📖 詳細</a></div>
+            <div class="stop-tags"><span class="tag yellow">EP.中盤 ロケ地</span><span class="tag pink">DINNER</span><span class="tag purple">施術後ケア</span></div>
+            <a class="spot-cta-btn" href="spots/nandong-konkoro.html">ロケ地の詳細を見る</a>
             <div class="stop-desc">
               <strong>スアが売上を回復させた長家・梨泰院店の外観</strong>として使われた居酒屋。24時間営業・年中無休、英語メニューあり。弘大入口駅9番出口徒歩5分。<br>
               <strong>※ リップアートメイク施術後のため、辛い物・熱々の料理・アルコールは避ける</strong>。常温のお茶や水、冷ました料理を中心に、ぬるめで優しい食事に。ストローでの飲食がベター。
