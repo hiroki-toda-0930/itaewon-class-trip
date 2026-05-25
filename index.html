@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>梨泰院クラス 聖地巡礼 旅のしおり｜2026.7.3-7.6</title>
+<style>
+  :root {
+    /* Vibrant flat palette - Itaewon neon inspired */
+    --cream: #FFF6E5;
+    --paper: #FFFFFF;
+    --ink: #1A1F3A;
+    --ink-2: #2D3458;
+    --muted: #6B7194;
+
+    --pink: #FF3D7F;      /* HONEY NIGHT neon pink */
+    --yellow: #FFC53D;    /* HONEY NIGHT yellow */
+    --mint: #16C7BE;      /* Cool exploration */
+    --purple: #8B5CF6;    /* Night mystery */
+    --coral: #FF7849;     /* Sunset arrival */
+    --navy: #1A1F3A;      /* Deep night */
+    --sky: #5BC0EB;       /* Daytime */
+    --leaf: #3DCC91;      /* Tasks/checklist */
+
+    --line: #1A1F3A;
+    --line-soft: #E8E2D0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Meiryo UI", "メイリオ", Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    padding: 28px 20px 60px;
+  }
+
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 2px solid var(--navy);
+    padding: 0;
+    box-shadow: 8px 8px 0 var(--navy);
+  }
+
+  /* ===== Cover ===== */
+  .cover {
+    padding: 44px 48px 0;
+    border-bottom: 2px solid var(--navy);
+    position: relative;
+    background: var(--yellow);
+  }
+  .cover-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--navy);
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+  .cover-title {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    color: var(--navy);
+  }
+  .cover-title em {
+    font-style: normal;
+    color: var(--pink);
+  }
+  .cover-sub {
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 28px;
+    font-weight: 700;
+  }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 2px solid var(--navy);
+    margin: 0 -48px;
+  }
+  .cover-meta > div {
+    padding: 16px 18px 16px;
+    border-right: 2px solid var(--navy);
+    background: var(--paper);
+  }
+  .cover-meta > div:nth-child(1) { background: var(--pink); color: var(--paper); }
+  .cover-meta > div:nth-child(2) { background: var(--mint); color: var(--navy); }
+  .cover-meta > div:nth-child(3) { background: var(--coral); color: var(--paper); }
+  .cover-meta > div:nth-child(4) { background: var(--purple); color: var(--paper); }
+  .cover-meta > div:last-child { border-right: none; }
+  .cover-meta .lbl {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    opacity: 0.85;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .cover-meta .val {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .cover-meta .val small {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.9;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .cover-illust {
+    position: absolute;
+    right: 32px;
+    top: 36px;
+    width: 240px;
+    height: 130px;
+  }
+
+  /* ===== Section ===== */
+  .section {
+    padding: 36px 48px;
+    border-bottom: 2px solid var(--navy);
+  }
+  .section:last-child { border-bottom: none; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--navy);
+    position: relative;
+  }
+  .section-num {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--paper);
+    background: var(--navy);
+    padding: 4px 10px;
+    font-weight: 700;
+  }
+  .section-title {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    color: var(--navy);
+  }
+  .section-sub {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    font-weight: 700;
+  }
+
+  /* Section variants */
+  .section.s-flight .section-num { background: var(--sky); color: var(--navy); }
+  .section.s-stay .section-num { background: var(--pink); }
+  .section.s-map .section-num { background: var(--yellow); color: var(--navy); }
+  .section.s-tips .section-num { background: var(--mint); color: var(--navy); }
+  .section.s-list .section-num { background: var(--leaf); color: var(--navy); }
+
+  /* ===== Flight ===== */
+  .flight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 2px solid var(--navy);
+  }
+  .flight-leg {
+    padding: 18px 20px;
+    border-right: 2px solid var(--navy);
+    background: var(--paper);
+  }
+  .flight-leg:nth-child(1) { background: #E8F4F8; }
+  .flight-leg:nth-child(2) { background: #FFE8D6; }
+  .flight-leg:last-child { border-right: none; }
+  .flight-leg .way {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--paper);
+    margin-bottom: 10px;
+    background: var(--navy);
+    padding: 3px 8px;
+    display: inline-block;
+    font-weight: 700;
+  }
+  .flight-leg:nth-child(1) .way { background: var(--sky); color: var(--navy); }
+  .flight-leg:nth-child(2) .way { background: var(--coral); }
+  .flight-leg .carrier {
+    font-weight: 900;
+    font-size: 14px;
+    margin-bottom: 14px;
+    color: var(--navy);
+  }
+  .flight-route {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .flight-route .ap { text-align: center; }
+  .flight-route .ap .iata {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+  }
+  .flight-route .ap .time {
+    font-size: 14px;
+    color: var(--ink-2);
+    font-weight: 700;
+  }
+  .flight-route .ap .date {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 700;
+  }
+  .flight-route .arrow {
+    flex: 1;
+    height: 2px;
+    background: var(--navy);
+    position: relative;
+  }
+  .flight-route .arrow::after {
+    content: "✈";
+    position: absolute;
+    top: -12px;
+    right: -6px;
+    font-size: 16px;
+    background: inherit;
+    padding: 0 4px;
+    color: var(--navy);
+  }
+  .flight-leg:nth-child(1) .flight-route .arrow::after { background: #E8F4F8; }
+  .flight-leg:nth-child(2) .flight-route .arrow::after { background: #FFE8D6; }
+  .flight-route .arrow .duration {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--navy);
+    padding: 0 6px;
+    font-weight: 700;
+    background: inherit;
+  }
+  .flight-leg:nth-child(1) .flight-route .arrow .duration { background: #E8F4F8; }
+  .flight-leg:nth-child(2) .flight-route .arrow .duration { background: #FFE8D6; }
+
+  /* ===== Hotel ===== */
+  .hotel {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 0;
+    border: 2px solid var(--navy);
+  }
+  .hotel-illust {
+    border-right: 2px solid var(--navy);
+    background: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .hotel-body {
+    padding: 18px 22px;
+    background: var(--paper);
+  }
+  .hotel-name {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 4px;
+    color: var(--navy);
+  }
+  .hotel-sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .hotel-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 24px;
+    font-size: 12px;
+  }
+  .hotel-meta .row {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+  }
+  .hotel-meta .row .k {
+    color: var(--paper);
+    background: var(--navy);
+    padding: 1px 8px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    min-width: 70px;
+    text-align: center;
+  }
+  .hotel-note {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: var(--yellow);
+    font-size: 12px;
+    color: var(--navy);
+    line-height: 1.6;
+    border-left: 4px solid var(--navy);
+    font-weight: 700;
+  }
+
+  /* ===== Map ===== */
+  .map-wrap {
+    border: 2px solid var(--navy);
+    background: var(--paper);
+  }
+  .map-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #FFF9E8;
+  }
+  .map-legend {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 2px solid var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .map-legend > div {
+    padding: 10px 14px;
+    border-right: 1px solid var(--line-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--navy);
+  }
+  .map-legend > div:last-child { border-right: none; }
+  .legend-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--pink);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 2px solid var(--navy);
+  }
+  .legend-star {
+    width: 22px;
+    height: 22px;
+    background: var(--yellow);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+    border: 2px solid var(--navy);
+    font-weight: 900;
+  }
+
+  /* ===== Day ===== */
+  .day {
+    margin-bottom: 28px;
+  }
+  .day:last-child { margin-bottom: 0; }
+  .day-head {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 18px;
+    align-items: center;
+    padding: 16px 20px;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+  }
+  .day-1 .day-head { background: var(--coral); color: var(--paper); }
+  .day-2 .day-head { background: var(--yellow); color: var(--navy); }
+  .day-3 .day-head { background: var(--mint); color: var(--navy); }
+  .day-4 .day-head { background: var(--purple); color: var(--paper); }
+
+  .day-head .num {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+  }
+  .day-head .num small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    opacity: 0.7;
+    margin-top: -2px;
+  }
+  .day-head .date {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .day-head .date small {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 2px;
+    letter-spacing: 0.05em;
+  }
+  .day-head .theme {
+    text-align: right;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    font-weight: 900;
+    background: var(--navy);
+    color: var(--paper);
+    padding: 6px 12px;
+  }
+  .day-2 .day-head .theme { background: var(--pink); }
+
+  /* Timeline */
+  .timeline {
+    border: 2px solid var(--navy);
+    border-top: none;
+    background: var(--paper);
+  }
+  .stop {
+    display: grid;
+    grid-template-columns: 90px 110px 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--line-soft);
+    min-height: 130px;
+  }
+  .stop:last-child { border-bottom: none; }
+  .stop-time {
+    padding: 16px 14px;
+    border-right: 1px solid var(--line-soft);
+    background: #FFF9E8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stop-time .t {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+  }
+  .stop-time .end {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 700;
+  }
+  .stop-time .marker {
+    margin-top: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--pink);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    border: 2px solid var(--navy);
+  }
+  .stop-time .marker.must { background: var(--yellow); color: var(--navy); }
+  .stop-time .marker.travel {
+    background: var(--paper);
+    color: var(--navy);
+    border: 2px solid var(--navy);
+  }
+  .stop-time .marker.hotel { background: var(--purple); }
+  .stop-icon {
+    border-right: 1px solid var(--line-soft);
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+  }
+  .stop-body {
+    padding: 14px 18px 14px;
+  }
+  .stop-name {
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 4px;
+    color: var(--navy);
+  }
+  .stop-name small {
+    font-weight: 700;
+    color: var(--muted);
+    font-size: 11px;
+    margin-left: 6px;
+    letter-spacing: 0.05em;
+  }
+  .stop-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--cream);
+    color: var(--navy);
+    border: 1.5px solid var(--navy);
+    letter-spacing: 0.05em;
+    font-weight: 700;
+  }
+  .tag.pink { background: var(--pink); color: white; border-color: var(--pink); }
+  .tag.yellow { background: var(--yellow); color: var(--navy); border-color: var(--navy); }
+  .tag.mint { background: var(--mint); color: var(--navy); border-color: var(--mint); }
+  .tag.purple { background: var(--purple); color: white; border-color: var(--purple); }
+  .tag.coral { background: var(--coral); color: white; border-color: var(--coral); }
+  .stop-desc {
+    font-size: 12px;
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+  .stop-desc strong { font-weight: 900; color: var(--navy); }
+  .stop-quote {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: var(--navy);
+    color: var(--yellow);
+    font-size: 11px;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  /* Travel row (transit between stops) */
+  .stop.travel {
+    min-height: 60px;
+    background: #F8F8F2;
+  }
+  .stop.travel .stop-icon { background: #F8F8F2; }
+  .stop.travel .stop-time { background: #F0F0E8; }
+  .stop.travel .stop-body { padding: 12px 18px; font-size: 12px; color: var(--ink-2); display: flex; align-items: center; font-weight: 700; }
+
+  /* ===== Tips Grid ===== */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .tip {
+    border: 2px solid var(--navy);
+    padding: 14px 16px;
+    background: var(--paper);
+  }
+  .tip:nth-child(3n+1) { background: #FFE9F0; }
+  .tip:nth-child(3n+2) { background: #FFF6D0; }
+  .tip:nth-child(3n+3) { background: #D5F4F2; }
+  .tip h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+    font-weight: 900;
+  }
+  .tip p {
+    font-size: 11.5px;
+    color: var(--ink-2);
+    line-height: 1.65;
+    font-weight: 500;
+  }
+  .tip p strong { color: var(--navy); font-weight: 900; }
+  .tip .tip-num {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--paper);
+    background: var(--navy);
+    padding: 2px 8px;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  /* ===== Checklist ===== */
+  .checklist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 2px solid var(--navy);
+  }
+  .checklist .col {
+    padding: 14px 18px;
+    border-right: 2px solid var(--navy);
+  }
+  .checklist .col:nth-child(1) { background: #FFE9F0; }
+  .checklist .col:nth-child(2) { background: #D5F4F2; }
+  .checklist .col:nth-child(3) { background: #EDE4FF; }
+  .checklist .col:last-child { border-right: none; }
+  .checklist h4 {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--navy);
+    color: var(--navy);
+    font-weight: 900;
+  }
+  .checklist ul {
+    list-style: none;
+    font-size: 12px;
+  }
+  .checklist li {
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink-2);
+    font-weight: 700;
+  }
+  .checklist li::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--navy);
+    flex-shrink: 0;
+    background: var(--paper);
+  }
+
+  /* ===== Footer ===== */
+  .footer {
+    padding: 24px 48px;
+    background: var(--navy);
+    color: var(--paper);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+  }
+  .footer .quote {
+    font-style: italic;
+    color: var(--yellow);
+  }
+
+  /* ===== Misc ===== */
+  .lead {
+    font-size: 13px;
+    color: var(--ink-2);
+    margin-bottom: 18px;
+    line-height: 1.75;
+    font-weight: 500;
+  }
+
+  .gmap-embed {
+    width: 100%;
+    height: 360px;
+    border: none;
+    border-top: 2px solid var(--navy);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .section, .cover { padding: 28px 22px; }
+    .cover-illust { display: none; }
+    .cover-title { font-size: 32px; }
+    .cover-meta { grid-template-columns: repeat(2, 1fr); margin: 0 -22px; }
+    .cover-meta > div { border-bottom: 2px solid var(--navy); }
+    .flight { grid-template-columns: 1fr; }
+    .flight-leg { border-right: none; border-bottom: 2px solid var(--navy); }
+    .flight-leg:last-child { border-bottom: none; }
+    .hotel { grid-template-columns: 1fr; }
+    .hotel-illust { border-right: none; border-bottom: 2px solid var(--navy); }
+    .stop { grid-template-columns: 70px 80px 1fr; }
+    .stop-time { padding: 12px 8px; }
+    .stop-time .t { font-size: 13px; }
+    .grid-3, .checklist, .map-legend { grid-template-columns: 1fr 1fr; }
+    .map-legend > div { border-bottom: 1px solid var(--line-soft); }
+  }
+  @media (max-width: 600px) {
+    .stop { grid-template-columns: 60px 1fr; }
+    .stop-icon { display: none; }
+    .grid-3, .checklist { grid-template-columns: 1fr; }
+    .footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; padding: 0; }
+    .page { border: none; box-shadow: none; }
+    .section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ====== COVER ====== -->
+  <section class="cover">
+    <svg class="cover-illust" viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- Itaewon skyline with neon -->
+      <line x1="0" y1="120" x2="240" y2="120" stroke="#1A1F3A" stroke-width="2"/>
+      <!-- buildings -->
+      <rect x="10" y="78" width="22" height="42" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+      <rect x="34" y="60" width="18" height="60" fill="#1A1F3A"/>
+      <rect x="54" y="82" width="14" height="38" fill="#16C7BE" stroke="#1A1F3A" stroke-width="1.5"/>
+      <rect x="70" y="68" width="20" height="52" fill="#8B5CF6" stroke="#1A1F3A" stroke-width="1.5"/>
+      <rect x="92" y="88" width="16" height="32" fill="#1A1F3A"/>
+      <rect x="110" y="75" width="22" height="45" fill="#FF7849" stroke="#1A1F3A" stroke-width="1.5"/>
+      <rect x="134" y="82" width="18" height="38" fill="#1A1F3A"/>
+      <rect x="154" y="65" width="20" height="55" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1.5"/>
+      <rect x="176" y="84" width="14" height="36" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+      <rect x="192" y="78" width="18" height="42" fill="#16C7BE" stroke="#1A1F3A" stroke-width="1.5"/>
+      <rect x="212" y="86" width="20" height="34" fill="#1A1F3A"/>
+      <!-- windows -->
+      <rect x="14" y="84" width="4" height="4" fill="#FFF6E5"/>
+      <rect x="22" y="92" width="4" height="4" fill="#FFF6E5"/>
+      <rect x="38" y="68" width="4" height="4" fill="#FFC53D"/>
+      <rect x="38" y="82" width="4" height="4" fill="#FFC53D"/>
+      <rect x="44" y="76" width="4" height="4" fill="#FFC53D"/>
+      <rect x="96" y="94" width="4" height="4" fill="#FFC53D"/>
+      <rect x="100" y="104" width="4" height="4" fill="#FFC53D"/>
+      <rect x="138" y="88" width="4" height="4" fill="#FFC53D"/>
+      <rect x="144" y="98" width="4" height="4" fill="#FFC53D"/>
+      <rect x="218" y="92" width="4" height="4" fill="#FFC53D"/>
+      <!-- N Seoul Tower -->
+      <g transform="translate(125, 5)">
+        <line x1="0" y1="0" x2="0" y2="65" stroke="#1A1F3A" stroke-width="2.5"/>
+        <ellipse cx="0" cy="22" rx="11" ry="6" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+        <rect x="-2" y="0" width="4" height="8" fill="#1A1F3A"/>
+        <line x1="-8" y1="65" x2="8" y2="65" stroke="#1A1F3A" stroke-width="2"/>
+      </g>
+      <!-- HONEY NIGHT sign -->
+      <g transform="translate(195, 25)">
+        <rect x="-20" y="-8" width="40" height="18" fill="#1A1F3A" stroke="#FFC53D" stroke-width="1.5"/>
+        <text x="0" y="-1" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="5" font-weight="900">HONEY</text>
+        <text x="0" y="7" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="5" font-weight="900">NIGHT</text>
+      </g>
+      <!-- Moon -->
+      <circle cx="25" cy="22" r="10" fill="#FFF6E5" stroke="#1A1F3A" stroke-width="1.5"/>
+      <circle cx="28" cy="20" r="3" fill="#1A1F3A" opacity="0.2"/>
+    </svg>
+
+    <div class="cover-eyebrow">★ ITAEWON CLASS · PILGRIMAGE ★</div>
+    <div class="cover-title">梨泰院クラス<br><em>聖地巡礼</em>の旅</div>
+    <div class="cover-sub">セロイとイソが歩いた街を、3泊4日でめぐる。</div>
+
+    <div class="cover-meta">
+      <div>
+        <div class="lbl">DATES</div>
+        <div class="val">2026.7.3<small>→ 7.6 / 3泊4日</small></div>
+      </div>
+      <div>
+        <div class="lbl">DESTINATION</div>
+        <div class="val">서울 SEOUL<small>梨泰院・解放村 中心</small></div>
+      </div>
+      <div>
+        <div class="lbl">TRAVELERS</div>
+        <div class="val">2 PAX<small>Hiroki &amp; Rie</small></div>
+      </div>
+      <div>
+        <div class="lbl">BASE</div>
+        <div class="val">Hamilton<small>Itaewon-ro 179</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FLIGHT ====== -->
+  <section class="section s-flight">
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <div class="section-title">FLIGHT｜搭乗便</div>
+      <div class="section-sub">NRT ⇄ ICN / DIRECT</div>
+    </div>
+
+    <div class="flight">
+      <div class="flight-leg">
+        <div class="way">OUTBOUND · 往路</div>
+        <div class="carrier">✈ ZIPAIR Tokyo</div>
+        <div class="flight-route">
+          <div class="ap">
+            <div class="iata">NRT</div>
+            <div class="time">10:40</div>
+            <div class="date">7月3日(金)</div>
+          </div>
+          <div class="arrow"><div class="duration">2h 30m</div></div>
+          <div class="ap">
+            <div class="iata">ICN</div>
+            <div class="time">13:10</div>
+            <div class="date">7月3日(金)</div>
+          </div>
+        </div>
+      </div>
+      <div class="flight-leg">
+        <div class="way">RETURN · 復路</div>
+        <div class="carrier">✈ EASTAR JET</div>
+        <div class="flight-route">
+          <div class="ap">
+            <div class="iata">ICN</div>
+            <div class="time">15:10</div>
+            <div class="date">7月6日(月)</div>
+          </div>
+          <div class="arrow"><div class="duration">2h 20m</div></div>
+          <div class="ap">
+            <div class="iata">NRT</div>
+            <div class="time">17:30</div>
+            <div class="date">7月6日(月)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOTEL ====== -->
+  <section class="section s-stay">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <div class="section-title">STAY｜宿泊</div>
+      <div class="section-sub">3 NIGHTS / TWIN DELUXE</div>
+    </div>
+
+    <div class="hotel">
+      <div class="hotel-illust">
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" width="200" height="140">
+          <!-- Hamilton Hotel stylized colorful -->
+          <rect x="25" y="25" width="150" height="110" fill="#FFF6E5" stroke="#1A1F3A" stroke-width="2"/>
+          <!-- windows grid -->
+          <g stroke="#1A1F3A" stroke-width="1" fill="none">
+            <line x1="50" y1="25" x2="50" y2="135"/>
+            <line x1="75" y1="25" x2="75" y2="135"/>
+            <line x1="100" y1="25" x2="100" y2="135"/>
+            <line x1="125" y1="25" x2="125" y2="135"/>
+            <line x1="150" y1="25" x2="150" y2="135"/>
+            <line x1="25" y1="50" x2="175" y2="50"/>
+            <line x1="25" y1="70" x2="175" y2="70"/>
+            <line x1="25" y1="90" x2="175" y2="90"/>
+            <line x1="25" y1="110" x2="175" y2="110"/>
+          </g>
+          <!-- colorful lit windows -->
+          <rect x="50" y="50" width="25" height="20" fill="#FFC53D"/>
+          <rect x="100" y="70" width="25" height="20" fill="#FF3D7F"/>
+          <rect x="125" y="50" width="25" height="20" fill="#16C7BE"/>
+          <rect x="50" y="90" width="25" height="20" fill="#FF7849"/>
+          <rect x="100" y="110" width="25" height="20" fill="#8B5CF6"/>
+          <rect x="150" y="90" width="25" height="20" fill="#FFC53D"/>
+          <rect x="75" y="70" width="25" height="20" fill="#1A1F3A"/>
+          <rect x="125" y="110" width="25" height="20" fill="#16C7BE"/>
+          <!-- entrance -->
+          <rect x="95" y="125" width="20" height="10" fill="#1A1F3A"/>
+          <!-- HAMILTON sign band -->
+          <rect x="25" y="8" width="150" height="17" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+          <text x="100" y="21" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="11" font-weight="900" letter-spacing="3">HAMILTON</text>
+          <!-- star marker -->
+          <circle cx="100" cy="3" r="8" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+          <text x="100" y="7" text-anchor="middle" fill="#1A1F3A" font-family="Meiryo UI" font-size="11" font-weight="900">★</text>
+        </svg>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">Hamilton Hotel Seoul</div>
+        <div class="hotel-sub">梨泰院クラス劇中のランドマーク。セロイが初めて梨泰院に来たシーンの「ドーン！」のホテル。</div>
+        <div class="hotel-meta">
+          <div class="row"><span class="k">ADDRESS</span><span>179, Itaewon-ro, Yongsan-gu</span></div>
+          <div class="row"><span class="k">ROOM</span><span>Twin Deluxe</span></div>
+          <div class="row"><span class="k">CHECK-IN</span><span>7月3日(金) 14:00〜</span></div>
+          <div class="row"><span class="k">CHECK-OUT</span><span>7月6日(月) 12:00</span></div>
+          <div class="row"><span class="k">予約番号</span><span>FBBMTWOYKB</span></div>
+          <div class="row"><span class="k">STATION</span><span>梨泰院駅 徒歩1分</span></div>
+        </div>
+        <div class="hotel-note">
+          ★ 立地の利点：ロケ地の8割が徒歩圏。Day2の聖地巡礼は車・地下鉄ゼロで完結。疲れたらすぐ戻れるので体験密度を最大化できる。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MAP ====== -->
+  <section class="section s-map">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <div class="section-title">MAP｜ロケ地マップ</div>
+      <div class="section-sub">HAMILTON HOTEL · 徒歩圏中心</div>
+    </div>
+    <p class="lead">ハミルトンホテル（★）を中心に、梨泰院クラスの主要ロケ地を1枚で俯瞰。地下鉄6号線が東西に通り、南には解放村〜南山公園が広がる。番号はエリア配置の目印で、訪問順ではない。</p>
+
+    <div class="map-wrap">
+      <svg class="map-svg" viewBox="0 0 1000 660" xmlns="http://www.w3.org/2000/svg">
+        <!-- bg -->
+        <rect x="0" y="0" width="1000" height="660" fill="#FFF9E8"/>
+
+        <!-- Subtle grid -->
+        <g stroke="#F0E8C8" stroke-width="0.8">
+          <line x1="0" y1="100" x2="1000" y2="100"/>
+          <line x1="0" y1="200" x2="1000" y2="200"/>
+          <line x1="0" y1="300" x2="1000" y2="300"/>
+          <line x1="0" y1="400" x2="1000" y2="400"/>
+          <line x1="0" y1="500" x2="1000" y2="500"/>
+          <line x1="0" y1="600" x2="1000" y2="600"/>
+          <line x1="100" y1="0" x2="100" y2="660"/>
+          <line x1="200" y1="0" x2="200" y2="660"/>
+          <line x1="300" y1="0" x2="300" y2="660"/>
+          <line x1="400" y1="0" x2="400" y2="660"/>
+          <line x1="500" y1="0" x2="500" y2="660"/>
+          <line x1="600" y1="0" x2="600" y2="660"/>
+          <line x1="700" y1="0" x2="700" y2="660"/>
+          <line x1="800" y1="0" x2="800" y2="660"/>
+          <line x1="900" y1="0" x2="900" y2="660"/>
+        </g>
+
+        <!-- Namsan area (south) - green -->
+        <path d="M 0,480 Q 250,440 500,470 Q 750,440 1000,470 L 1000,660 L 0,660 Z" fill="#D5F4D5" stroke="#3DCC91" stroke-width="1.5"/>
+        <text x="500" y="630" text-anchor="middle" font-family="Meiryo UI" font-size="12" fill="#1A6F4F" letter-spacing="4" font-weight="900">NAMSAN PARK · 南山公園</text>
+
+        <!-- N Seoul Tower colorful -->
+        <g transform="translate(560, 540)">
+          <line x1="0" y1="0" x2="0" y2="-55" stroke="#1A1F3A" stroke-width="3"/>
+          <ellipse cx="0" cy="-32" rx="11" ry="6" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+          <rect x="-2" y="-62" width="4" height="9" fill="#1A1F3A"/>
+          <line x1="-12" y1="0" x2="12" y2="0" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text x="0" y="22" text-anchor="middle" font-family="Meiryo UI" font-size="10" fill="#1A1F3A" font-weight="900">N Seoul Tower</text>
+        </g>
+
+        <!-- 解放村 area highlight -->
+        <ellipse cx="370" cy="475" rx="180" ry="60" fill="#EDE4FF" opacity="0.6"/>
+
+        <!-- Main Roads -->
+        <line x1="40" y1="280" x2="960" y2="280" stroke="#1A1F3A" stroke-width="20" opacity="0.1"/>
+        <line x1="40" y1="280" x2="960" y2="280" stroke="#1A1F3A" stroke-width="2"/>
+        <text x="930" y="270" text-anchor="end" font-family="Meiryo UI" font-size="11" fill="#1A1F3A" font-weight="900" letter-spacing="2">ITAEWON-RO</text>
+
+        <line x1="320" y1="280" x2="320" y2="480" stroke="#1A1F3A" stroke-width="14" opacity="0.08"/>
+        <line x1="320" y1="280" x2="320" y2="480" stroke="#1A1F3A" stroke-width="1.5"/>
+
+        <!-- Side streets -->
+        <line x1="600" y1="280" x2="600" y2="450" stroke="#8B5CF6" stroke-width="1" opacity="0.5"/>
+        <line x1="700" y1="280" x2="780" y2="430" stroke="#8B5CF6" stroke-width="1" opacity="0.5"/>
+        <line x1="500" y1="280" x2="430" y2="430" stroke="#8B5CF6" stroke-width="1" opacity="0.5"/>
+        <line x1="400" y1="370" x2="700" y2="380" stroke="#8B5CF6" stroke-width="1" opacity="0.5"/>
+
+        <!-- Subway Line 6 -->
+        <line x1="40" y1="260" x2="960" y2="260" stroke="#FF7849" stroke-width="4" stroke-dasharray="10 4"/>
+        <rect x="50" y="246" width="60" height="14" fill="#FF7849"/>
+        <text x="80" y="256" text-anchor="middle" font-family="Meiryo UI" font-size="10" fill="#FFF" letter-spacing="2" font-weight="900">LINE 6</text>
+
+        <!-- Stations -->
+        <g>
+          <!-- Noksapyeong Station -->
+          <circle cx="320" cy="260" r="10" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text x="320" y="265" text-anchor="middle" font-family="Meiryo UI" font-size="9" fill="#1A1F3A" font-weight="900">6</text>
+          <rect x="280" y="218" width="80" height="20" fill="#1A1F3A"/>
+          <text x="320" y="232" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">緑莎坪駅</text>
+
+          <!-- Itaewon Station -->
+          <circle cx="640" cy="260" r="10" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text x="640" y="265" text-anchor="middle" font-family="Meiryo UI" font-size="9" fill="#1A1F3A" font-weight="900">6</text>
+          <rect x="600" y="218" width="80" height="20" fill="#1A1F3A"/>
+          <text x="640" y="232" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">梨泰院駅</text>
+        </g>
+
+        <!-- HAMILTON HOTEL (star) -->
+        <g transform="translate(640, 320)">
+          <rect x="-32" y="-22" width="64" height="44" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text x="0" y="8" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="26" font-weight="900">★</text>
+          <rect x="-32" y="26" width="64" height="16" fill="#1A1F3A"/>
+          <text x="0" y="38" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFC53D">HAMILTON</text>
+          <text x="0" y="56" text-anchor="middle" font-family="Meiryo UI" font-size="9" fill="#1A1F3A" font-weight="900">拠点・滞在先</text>
+        </g>
+
+        <!-- Locations as numbered markers with color coding -->
+        <!-- 1: 世界グルメ文化通り (pink) -->
+        <g transform="translate(640, 195)">
+          <circle r="16" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">1</text>
+          <rect x="-55" y="-38" width="110" height="14" fill="#FF3D7F"/>
+          <text y="-28" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">世界グルメ通り</text>
+        </g>
+
+        <!-- 2: Club Pumpkin (purple) -->
+        <g transform="translate(740, 320)">
+          <circle r="16" fill="#8B5CF6" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">2</text>
+          <rect x="-50" y="22" width="100" height="14" fill="#8B5CF6"/>
+          <text y="32" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">Club Pumpkin</text>
+        </g>
+
+        <!-- 3: Plain Note (mint) -->
+        <g transform="translate(390, 450)">
+          <circle r="16" fill="#16C7BE" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">3</text>
+          <rect x="-55" y="-38" width="110" height="14" fill="#16C7BE"/>
+          <text y="-28" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#1A1F3A">Plain Note</text>
+          <text y="-15" text-anchor="middle" font-family="Meiryo UI" font-size="8" fill="#1A1F3A" font-weight="900">スアの家</text>
+        </g>
+
+        <!-- 4: ソウルバム (yellow) -->
+        <g transform="translate(420, 330)">
+          <circle r="16" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#1A1F3A" font-family="Meiryo UI" font-size="13" font-weight="900">4</text>
+          <rect x="-50" y="22" width="100" height="14" fill="#FFC53D"/>
+          <text y="32" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#1A1F3A">ソウルバム</text>
+          <text y="46" text-anchor="middle" font-family="Meiryo UI" font-size="8" fill="#1A1F3A" font-weight="700">旧タンバム1号店</text>
+        </g>
+
+        <!-- 5: 緑莎坪歩道橋 (coral) -->
+        <g transform="translate(280, 360)">
+          <circle r="16" fill="#FF7849" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">5</text>
+          <rect x="-50" y="-38" width="100" height="14" fill="#FF7849"/>
+          <text y="-28" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">緑莎坪陸橋</text>
+        </g>
+
+        <!-- 6: G Guesthouse (sky) -->
+        <g transform="translate(720, 385)">
+          <circle r="16" fill="#5BC0EB" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#1A1F3A" font-family="Meiryo UI" font-size="13" font-weight="900">6</text>
+          <rect x="-55" y="22" width="110" height="14" fill="#5BC0EB"/>
+          <text y="32" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#1A1F3A">G Guesthouse</text>
+        </g>
+
+        <!-- 9: Oriole (pink) -->
+        <g transform="translate(330, 470)">
+          <circle r="16" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">9</text>
+          <rect x="-40" y="22" width="80" height="14" fill="#FF3D7F"/>
+          <text y="32" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">Oriole</text>
+          <text y="46" text-anchor="middle" font-family="Meiryo UI" font-size="8" fill="#1A1F3A" font-weight="900">タンバム2</text>
+        </g>
+
+        <!-- 11: 梨泰院児童公園 (leaf green) -->
+        <g transform="translate(465, 380)">
+          <circle r="16" fill="#3DCC91" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">11</text>
+          <rect x="-60" y="22" width="120" height="14" fill="#3DCC91"/>
+          <text y="32" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">梨泰院児童公園</text>
+        </g>
+
+        <!-- 15: JACK'S BAR (purple) -->
+        <g transform="translate(580, 350)">
+          <circle r="16" fill="#8B5CF6" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">15</text>
+          <rect x="-50" y="22" width="100" height="14" fill="#8B5CF6"/>
+          <text y="32" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">JACK'S BAR</text>
+          <text y="46" text-anchor="middle" font-family="Meiryo UI" font-size="8" fill="#1A1F3A" font-weight="900">天使の羽</text>
+        </g>
+
+        <!-- 16: 白凡広場 (coral) -->
+        <g transform="translate(640, 500)">
+          <circle r="16" fill="#FF7849" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#FFF6E5" font-family="Meiryo UI" font-size="13" font-weight="900">16</text>
+          <rect x="-45" y="-38" width="90" height="14" fill="#FF7849"/>
+          <text y="-28" text-anchor="middle" font-family="Meiryo UI" font-size="10" font-weight="900" fill="#FFF6E5">白凡広場</text>
+        </g>
+
+        <!-- クルバム (extra) yellow square -->
+        <g transform="translate(700, 230)">
+          <rect x="-14" y="-14" width="28" height="28" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text y="5" text-anchor="middle" fill="#1A1F3A" font-family="Meiryo UI" font-size="14" font-weight="900">꿀</text>
+          <rect x="-55" y="-30" width="110" height="14" fill="#FFC53D"/>
+          <text y="-20" text-anchor="middle" font-family="Meiryo UI" font-size="9" font-weight="900" fill="#1A1F3A">クルバム(原作者の店)</text>
+        </g>
+
+        <!-- 解放村 area label -->
+        <text x="370" y="525" text-anchor="middle" font-family="Meiryo UI" font-size="12" fill="#5A3DC0" letter-spacing="4" font-weight="900">HAEBANGCHON · 解放村</text>
+
+        <!-- Compass -->
+        <g transform="translate(940, 60)">
+          <circle r="26" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2.5"/>
+          <polygon points="0,-18 6,0 0,18 -6,0" fill="#1A1F3A"/>
+          <polygon points="0,-18 6,0 0,0" fill="#FF3D7F"/>
+          <text y="-32" text-anchor="middle" font-family="Meiryo UI" font-size="11" font-weight="900" fill="#1A1F3A">N</text>
+        </g>
+
+        <!-- Scale bar -->
+        <g transform="translate(60, 600)">
+          <rect x="0" y="-3" width="100" height="6" fill="#1A1F3A"/>
+          <rect x="0" y="-3" width="50" height="6" fill="#FFC53D"/>
+          <line x1="0" y1="-8" x2="0" y2="8" stroke="#1A1F3A" stroke-width="2.5"/>
+          <line x1="100" y1="-8" x2="100" y2="8" stroke="#1A1F3A" stroke-width="2.5"/>
+          <text x="50" y="-12" text-anchor="middle" font-family="Meiryo UI" font-size="10" fill="#1A1F3A" font-weight="900">約 300m</text>
+        </g>
+
+        <text x="960" y="640" text-anchor="end" font-family="Meiryo UI" font-size="9" fill="#999" font-weight="700">※ 簡略図。実際の縮尺・配置はGoogleマップで確認</text>
+      </svg>
+
+      <div class="map-legend">
+        <div><span class="legend-star">★</span><span>滞在ホテル（拠点）</span></div>
+        <div><span class="legend-dot">1</span><span>主要ロケ地</span></div>
+        <div><span style="width:22px;height:6px;background:#FF7849;border-radius:3px;"></span><span>地下鉄6号線</span></div>
+        <div><span style="width:22px;height:2px;background:#1A1F3A;"></span><span>主要道路</span></div>
+      </div>
+
+      <iframe class="gmap-embed"
+        src="https://maps.google.com/maps?q=Hamilton+Hotel+Itaewon+Seoul&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- ====== ITINERARY ====== -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <div class="section-title">ITINERARY｜旅程</div>
+      <div class="section-sub">DAY 1 - DAY 4</div>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day day-1">
+      <div class="day-head">
+        <div class="num">01<small>DAY</small></div>
+        <div class="date">7月3日 金曜日<small>ARRIVAL · 到着＆夜の梨泰院ライト散策</small></div>
+        <div class="theme">ARRIVE &amp; WANDER</div>
+      </div>
+      <div class="timeline">
+
+        <div class="stop travel">
+          <div class="stop-time">
+            <div class="t">10:40</div>
+            <div class="end">→ 13:10</div>
+            <div class="marker travel">✈</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="60" height="60">
+              <rect x="5" y="32" width="70" height="2" fill="#5BC0EB"/>
+              <polygon points="32,22 52,40 32,58 36,40" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <text x="40" y="72" text-anchor="middle" font-family="Meiryo UI" font-size="9" fill="#1A1F3A" font-weight="900">NRT → ICN</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <strong>ZIPAIR Tokyo｜NRT 10:40 → ICN 13:10</strong>　成田から仁川へ直行2時間30分。機内で韓ドラ最終話を予習する時間にも。
+          </div>
+        </div>
+
+        <div class="stop travel">
+          <div class="stop-time">
+            <div class="t">13:30</div>
+            <div class="end">→ 15:00</div>
+            <div class="marker travel">⇢</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="60" height="60">
+              <rect x="10" y="28" width="60" height="24" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2" rx="3"/>
+              <circle cx="22" cy="56" r="6" fill="#1A1F3A"/>
+              <circle cx="58" cy="56" r="6" fill="#1A1F3A"/>
+              <rect x="14" y="32" width="14" height="12" fill="#16C7BE"/>
+              <rect x="32" y="32" width="14" height="12" fill="#16C7BE"/>
+              <rect x="50" y="32" width="14" height="12" fill="#16C7BE"/>
+              <text x="40" y="22" text-anchor="middle" font-family="Meiryo UI" font-size="8" fill="#1A1F3A" font-weight="900">AREX / TAXI</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <strong>仁川空港 → ハミルトンホテル</strong>　空港鉄道A'REX＋地下鉄6号線で約1時間（直通46分/一般58分）。WOWPASS発行は空港地下1階で。荷物が多ければタクシー（₩70,000前後・約1.5時間）。
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">15:00</div>
+            <div class="end">〜16:30</div>
+            <div class="marker hotel">H</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="15" y="22" width="50" height="50" fill="#FFF6E5" stroke="#1A1F3A" stroke-width="2"/>
+              <rect x="15" y="14" width="50" height="10" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <text x="40" y="21" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="6" font-weight="900" letter-spacing="1">HAMILTON</text>
+              <rect x="20" y="30" width="8" height="8" fill="#FFC53D"/>
+              <rect x="36" y="30" width="8" height="8" fill="#16C7BE"/>
+              <rect x="52" y="30" width="8" height="8" fill="#FF3D7F"/>
+              <rect x="20" y="44" width="8" height="8" fill="#8B5CF6"/>
+              <rect x="36" y="44" width="8" height="8" fill="#FF7849"/>
+              <rect x="52" y="44" width="8" height="8" fill="#FFC53D"/>
+              <rect x="35" y="58" width="10" height="14" fill="#1A1F3A"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">Hamilton Hotel チェックイン<small>梨泰院駅徒歩1分</small></div>
+            <div class="stop-tags"><span class="tag pink">CHECK-IN</span><span class="tag">REST</span></div>
+            <div class="stop-desc">
+              チェックイン後ひと休み。<strong>ホテルの正面外観の写真を撮っておく</strong>と、後で「セロイが初めて梨泰院を訪れた、まさにこの場所」記念になる。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">17:00</div>
+            <div class="end">〜19:00</div>
+            <div class="marker">1</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <line x1="10" y1="60" x2="70" y2="60" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="10" y1="65" x2="70" y2="65" stroke="#1A1F3A" stroke-width="0.8" stroke-dasharray="2 2"/>
+              <rect x="10" y="35" width="15" height="25" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <rect x="27" y="40" width="13" height="20" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1.5"/>
+              <rect x="42" y="32" width="14" height="28" fill="#16C7BE" stroke="#1A1F3A" stroke-width="1.5"/>
+              <rect x="58" y="42" width="12" height="18" fill="#8B5CF6" stroke="#1A1F3A" stroke-width="1.5"/>
+              <circle cx="20" cy="20" r="3" fill="#FF7849" stroke="#1A1F3A" stroke-width="1"/>
+              <circle cx="35" cy="18" r="3" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+              <circle cx="50" cy="20" r="3" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1"/>
+              <circle cx="65" cy="18" r="3" fill="#16C7BE" stroke="#1A1F3A" stroke-width="1"/>
+              <line x1="10" y1="25" x2="70" y2="22" stroke="#1A1F3A" stroke-width="0.8"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">世界グルメ文化通り<small>ハミルトン裏</small></div>
+            <div class="stop-tags"><span class="tag pink">EP.2 ロケ地</span><span class="tag">徒歩1分</span></div>
+            <div class="stop-desc">
+              <strong>セロイがハロウィンの日にスアと偶然再会した場所。</strong>各国料理店が並ぶ通りで、夜にはネオンが灯り異国情緒たっぷり。日が落ち始める時間がベスト。
+            </div>
+            <div class="stop-quote">「あの日…俺、ずっと君のこと忘れられなかった」</div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">17:30</div>
+            <div class="end">〜18:00</div>
+            <div class="marker">15</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <path d="M 40,50 Q 15,30 10,15 Q 25,28 38,35 Z" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1.5"/>
+              <path d="M 40,50 Q 65,30 70,15 Q 55,28 42,35 Z" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1.5"/>
+              <path d="M 18,22 Q 22,28 26,32" stroke="#1A1F3A" stroke-width="0.8" fill="none"/>
+              <path d="M 26,18 Q 28,26 32,33" stroke="#1A1F3A" stroke-width="0.8" fill="none"/>
+              <path d="M 62,22 Q 58,28 54,32" stroke="#1A1F3A" stroke-width="0.8" fill="none"/>
+              <path d="M 54,18 Q 52,26 48,33" stroke="#1A1F3A" stroke-width="0.8" fill="none"/>
+              <circle cx="40" cy="55" r="4" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">JACK'S BAR｜天使の羽の壁<small>梨泰院駅徒歩すぐ</small></div>
+            <div class="stop-tags"><span class="tag purple">最終回 ロケ地</span><span class="tag yellow">PHOTO SPOT</span></div>
+            <div class="stop-desc">
+              最終回でセロイとイソが写真を撮りあっていた、<strong>翼の壁画の前</strong>。2人で羽の前に立ってツーショットを撮るのが定番。夜のJACK'S BARでは無料ゲームマシンも遊べる。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">19:30</div>
+            <div class="end">〜21:30</div>
+            <div class="marker must">★</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="6" y="18" width="68" height="36" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <text x="40" y="36" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="9" font-weight="900">HONEY</text>
+              <text x="40" y="48" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="9" font-weight="900">NIGHT</text>
+              <line x1="40" y1="54" x2="40" y2="70" stroke="#1A1F3A" stroke-width="2.5"/>
+              <line x1="32" y1="70" x2="48" y2="70" stroke="#1A1F3A" stroke-width="2.5"/>
+              <!-- glow stars -->
+              <text x="10" y="14" font-family="Meiryo UI" font-size="8" fill="#FFC53D">★</text>
+              <text x="68" y="14" font-family="Meiryo UI" font-size="8" fill="#FFC53D">★</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">クルバムポチャ（꿀밤포차）<small>原作者・脚本家のお店</small></div>
+            <div class="stop-tags"><span class="tag pink">DINNER</span><span class="tag yellow">タンバムのモデル</span></div>
+            <div class="stop-desc">
+              ドラマには登場しないが、<strong>原作漫画家＆脚本家が経営する居酒屋</strong>。「HONEY NIGHT」のネオン看板、店内にはセロイとスアの壁画。メニューにもキャラ。<strong>タンバムの実モデル</strong>。初日の夕食はここで原作リスペクト。
+            </div>
+            <div class="stop-quote">「所信に対価がないような人生を生きたい」</div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">22:00</div>
+            <div class="end">就寝</div>
+            <div class="marker hotel">H</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <circle cx="40" cy="40" r="22" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+              <path d="M 50,30 Q 55,40 50,50 Q 42,52 35,48 Q 32,40 38,32 Q 44,28 50,30 Z" fill="#1A1F3A"/>
+              <circle cx="20" cy="20" r="2" fill="#FF3D7F"/>
+              <circle cx="60" cy="62" r="2" fill="#8B5CF6"/>
+              <circle cx="65" cy="22" r="1.5" fill="#16C7BE"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">ハミルトン帰還・就寝</div>
+            <div class="stop-desc">明日に備えて早めに。Day2は7:30スタートで緑莎坪陸橋の早朝撮影が決まる。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day day-2">
+      <div class="day-head">
+        <div class="num">02<small>DAY</small></div>
+        <div class="date">7月4日 土曜日<small>PILGRIMAGE CORE · 聖地巡礼コアデー</small></div>
+        <div class="theme">★ MAIN EVENT</div>
+      </div>
+      <div class="timeline">
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">07:30</div>
+            <div class="end">〜08:30</div>
+            <div class="marker must">5</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="0" y="58" width="80" height="12" fill="#5BC0EB" opacity="0.3"/>
+              <line x1="5" y1="55" x2="75" y2="55" stroke="#1A1F3A" stroke-width="2.5"/>
+              <line x1="5" y1="60" x2="75" y2="60" stroke="#1A1F3A" stroke-width="0.8"/>
+              <line x1="10" y1="55" x2="10" y2="40" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="20" y1="55" x2="20" y2="40" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="30" y1="55" x2="30" y2="40" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="50" y1="55" x2="50" y2="40" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="60" y1="55" x2="60" y2="40" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="70" y1="55" x2="70" y2="40" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="5" y1="40" x2="75" y2="40" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="40" y1="40" x2="40" y2="10" stroke="#1A1F3A" stroke-width="2"/>
+              <ellipse cx="40" cy="20" rx="7" ry="4" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <rect x="38" y="6" width="4" height="6" fill="#1A1F3A"/>
+              <circle cx="12" cy="14" r="5" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">緑莎坪（ノクサピョン）陸橋<small>セロイ思考の場所</small></div>
+            <div class="stop-tags"><span class="tag yellow">★ MUST</span><span class="tag pink">早朝推奨</span><span class="tag">写真◎</span></div>
+            <div class="stop-desc">
+              <strong>セロイが一人で考え事をし、イソと真面目な話をした、ドラマで何度も登場する陸橋。</strong>橋の中央からNソウルタワーが正面に。<strong>早朝7:30は人が少なく順光で写真ベスト</strong>。日中は暑く観光客も増える。
+            </div>
+            <div class="stop-quote">「俺の人生、ここから始まる」</div>
+          </div>
+        </div>
+
+        <div class="stop travel">
+          <div class="stop-time">
+            <div class="t">08:30</div>
+            <div class="end">〜10:00</div>
+            <div class="marker travel">☕</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="48" height="48">
+              <rect x="20" y="30" width="35" height="25" fill="#FF7849" stroke="#1A1F3A" stroke-width="1.5" rx="2"/>
+              <path d="M 55,35 Q 65,40 55,50" fill="none" stroke="#1A1F3A" stroke-width="1.5"/>
+              <line x1="28" y1="20" x2="28" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="35" y1="18" x2="35" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="42" y1="22" x2="42" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            ホテル戻り・朝食。漢南洞 or 解放村のカフェでゆっくり。
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">10:00</div>
+            <div class="end">〜12:00</div>
+            <div class="marker">2</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <ellipse cx="40" cy="48" rx="28" ry="22" fill="#FF7849" stroke="#1A1F3A" stroke-width="2"/>
+              <path d="M 20,48 Q 40,28 60,48" fill="none" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="40" y1="26" x2="40" y2="14" stroke="#3DCC91" stroke-width="2.5"/>
+              <line x1="30" y1="28" x2="50" y2="28" stroke="#3DCC91" stroke-width="3"/>
+              <ellipse cx="32" cy="42" rx="3" ry="2" fill="#1A1F3A"/>
+              <ellipse cx="48" cy="42" rx="3" ry="2" fill="#1A1F3A"/>
+              <path d="M 32,52 Q 40,58 48,52" fill="none" stroke="#1A1F3A" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">梨泰院クラスター 徒歩巡礼<small>Club Pumpkin → G Guesthouse → JACK'S BAR(昼)</small></div>
+            <div class="stop-tags"><span class="tag purple">EP.8 ロケ地</span><span class="tag">徒歩</span></div>
+            <div class="stop-desc">
+              <strong>Club Pumpkin（#2）</strong>：トニーが入店拒否、ハロウィン回でセロイ＆スアが飲んだクラブ。<br>
+              <strong>G Guesthouse（#6）</strong>：グンスのコシウォン、イソが同級生の親と口論した場所。屋上見学可。<br>
+              <strong>JACK'S BAR（#15）昼バージョン</strong>：天使の羽の壁を昼の光で再撮影。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">12:00</div>
+            <div class="end">〜13:30</div>
+            <div class="marker must">4</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="10" y="20" width="60" height="50" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+              <rect x="10" y="20" width="60" height="16" fill="#1A1F3A"/>
+              <text x="40" y="32" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="11" font-weight="900">단밤</text>
+              <rect x="32" y="50" width="16" height="20" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <rect x="14" y="40" width="14" height="22" fill="#FFF6E5" stroke="#1A1F3A" stroke-width="1"/>
+              <rect x="52" y="40" width="14" height="22" fill="#FFF6E5" stroke="#1A1F3A" stroke-width="1"/>
+              <circle cx="20" cy="16" r="4" fill="#FF7849" stroke="#1A1F3A" stroke-width="1"/>
+              <circle cx="60" cy="16" r="4" fill="#FF7849" stroke="#1A1F3A" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">ソウルバム（旧タンバム1号店）<small>★ ランチ</small></div>
+            <div class="stop-tags"><span class="tag yellow">EP.1〜 ロケ地</span><span class="tag pink">劇中メニュー</span></div>
+            <div class="stop-desc">
+              タンバム移転前の店舗が現在「ソウルバム」という飲食店に。<strong>劇中のスンドゥブチゲ＋豚もやし炒めセットメニュー</strong>を提供。店外には「梨泰院クラスのロケ地」看板。<strong>ここで食べると体験密度が一気に跳ね上がる</strong>。
+            </div>
+            <div class="stop-quote">「タンバム、開店します」</div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">13:30</div>
+            <div class="end">〜14:30</div>
+            <div class="marker">▶</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <path d="M 20,70 L 30,55 L 40,40 L 50,25 L 60,10" stroke="#FF3D7F" stroke-width="2.5" fill="none"/>
+              <path d="M 25,68 L 22,72 M 35,53 L 32,57 M 45,38 L 42,42 M 55,23 L 52,27" stroke="#1A1F3A" stroke-width="1"/>
+              <rect x="5" y="35" width="12" height="30" fill="#16C7BE" stroke="#1A1F3A" stroke-width="1.5"/>
+              <rect x="64" y="20" width="12" height="40" fill="#8B5CF6" stroke="#1A1F3A" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">タンバム周辺の路地散策</div>
+            <div class="stop-tags"><span class="tag">小スポット</span></div>
+            <div class="stop-desc">
+              ハロウィンの日にスアがセロイにピエロメイクをしてあげた階段、イソが同級生の女の子を殴った場所など、<strong>名シーン多数の路地</strong>がギュッと詰まったエリア。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">14:30</div>
+            <div class="end">〜15:30</div>
+            <div class="marker">11</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <circle cx="30" cy="35" r="14" fill="#FFF6E5" stroke="#1A1F3A" stroke-width="2"/>
+              <circle cx="25" cy="30" r="3" fill="#1A1F3A"/>
+              <circle cx="35" cy="30" r="3" fill="#1A1F3A"/>
+              <circle cx="30" cy="38" r="2" fill="#1A1F3A"/>
+              <ellipse cx="22" cy="24" rx="4" ry="3" fill="#1A1F3A"/>
+              <ellipse cx="38" cy="24" rx="4" ry="3" fill="#1A1F3A"/>
+              <path d="M 44,40 L 70,65" stroke="#FF3D7F" stroke-width="3"/>
+              <line x1="46" y1="42" x2="46" y2="48" stroke="#1A1F3A"/>
+              <line x1="70" y1="65" x2="70" y2="71" stroke="#1A1F3A"/>
+              <line x1="5" y1="71" x2="75" y2="71" stroke="#3DCC91" stroke-width="2.5"/>
+              <circle cx="65" cy="18" r="3" fill="#FFC53D"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">梨泰院児童公園<small>パンダ滑り台</small></div>
+            <div class="stop-tags"><span class="tag mint">EP.5 ロケ地</span><span class="tag yellow">フォトスポット</span></div>
+            <div class="stop-desc">
+              セロイがグンスを慰めた場所、カン専務と元刑事のおじさんの娘が出会った場所。<strong>パンダ型の遊具が異様な存在感</strong>。子供じゃなくても写真は撮りたくなる。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">15:30</div>
+            <div class="end">〜16:30</div>
+            <div class="marker">3</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <polygon points="20,40 40,20 60,40 60,65 20,65" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <rect x="35" y="50" width="10" height="15" fill="#1A1F3A"/>
+              <rect x="25" y="45" width="6" height="6" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+              <rect x="49" y="45" width="6" height="6" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+              <polygon points="20,40 40,20 60,40" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+              <path d="M 5,70 L 8,67 L 11,64 L 14,61 L 17,58 L 20,55" stroke="#1A1F3A" stroke-width="2" fill="none"/>
+              <line x1="7" y1="69" x2="4" y2="72" stroke="#1A1F3A"/>
+              <line x1="13" y1="63" x2="10" y2="66" stroke="#1A1F3A"/>
+              <line x1="19" y1="57" x2="16" y2="60" stroke="#1A1F3A"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">Plain Note｜スアの学生時代の家<small>解放村</small></div>
+            <div class="stop-tags"><span class="tag mint">EP.2 ロケ地</span><span class="tag">外観のみ</span></div>
+            <div class="stop-desc">
+              実際はウェディング写真の撮影スタジオ。<strong>セロイがスアをおんぶして上がった、あの階段を実際に歩く</strong>のがハイライト。中には入れないが、ピンクの門の前で写真。営業中のお店なので撮影は短時間で。
+            </div>
+            <div class="stop-quote">「자고 갈래?（寝ていく？）」</div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">17:00</div>
+            <div class="end">〜21:30</div>
+            <div class="marker must">9</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="0" y="0" width="80" height="40" fill="#8B5CF6" opacity="0.3"/>
+              <line x1="5" y1="60" x2="75" y2="60" stroke="#1A1F3A" stroke-width="2.5"/>
+              <line x1="5" y1="60" x2="5" y2="48" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="75" y1="60" x2="75" y2="48" stroke="#1A1F3A" stroke-width="1.2"/>
+              <rect x="15" y="48" width="14" height="12" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <line x1="15" y1="48" x2="15" y2="42" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="35" y1="52" x2="50" y2="52" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="38" y1="52" x2="38" y2="60" stroke="#1A1F3A"/>
+              <line x1="47" y1="52" x2="47" y2="60" stroke="#1A1F3A"/>
+              <path d="M 40,50 L 41,46 L 44,46 L 45,50 Z" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+              <line x1="65" y1="48" x2="65" y2="20" stroke="#1A1F3A" stroke-width="2"/>
+              <ellipse cx="65" cy="28" rx="5" ry="3" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <circle cx="22" cy="14" r="6" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1.5"/>
+              <text x="10" y="10" font-family="Meiryo UI" font-size="7" fill="#FFC53D">★</text>
+              <text x="70" y="10" font-family="Meiryo UI" font-size="7" fill="#FFC53D">★</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">Oriole｜タンバム（移転後）<small>★ DINNER &amp; NIGHT VIEW</small></div>
+            <div class="stop-tags"><span class="tag yellow">★ MUST</span><span class="tag pink">DINNER</span><span class="tag purple">EP.中盤 ロケ地</span></div>
+            <div class="stop-desc">
+              タンバム移転後の店舗ロケ地。<strong>1階カフェ、2階バー、3階ルーフトップ</strong>の3層構造。<strong>解放村の高台からNソウルタワーを正面に見る夜景は今回の旅のハイライト</strong>。お店の目の前の階段も劇中シーン。<strong>事前予約推奨</strong>（Instagram DM: @oriole_bar）。
+            </div>
+            <div class="stop-quote">「俺の夢が、ここから世界に広がる」</div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">22:00</div>
+            <div class="end">就寝</div>
+            <div class="marker hotel">H</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <circle cx="40" cy="40" r="22" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+              <path d="M 50,30 Q 55,40 50,50 Q 42,52 35,48 Q 32,40 38,32 Q 44,28 50,30 Z" fill="#1A1F3A"/>
+              <text x="14" y="18" font-family="Meiryo UI" font-size="8" fill="#FF3D7F">★</text>
+              <text x="62" y="62" font-family="Meiryo UI" font-size="8" fill="#16C7BE">★</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">ハミルトン帰還</div>
+            <div class="stop-desc">Orioleからホテルまでタクシー10分（解放村は坂が多いので歩きはきつい）。今日撮った写真をベッドで2人でチェックする時間。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day day-3">
+      <div class="day-head">
+        <div class="num">03<small>DAY</small></div>
+        <div class="date">7月5日 日曜日<small>EXTENDED · 明洞・南山・弘大 拡張デー</small></div>
+        <div class="theme">EXPLORE BEYOND</div>
+      </div>
+      <div class="timeline">
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">09:00</div>
+            <div class="end">〜10:30</div>
+            <div class="marker">☕</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="15" y="30" width="40" height="30" fill="#FF7849" stroke="#1A1F3A" stroke-width="2" rx="2"/>
+              <path d="M 55,38 Q 68,44 55,52" fill="none" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="25" y1="20" x2="25" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="35" y1="18" x2="35" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="45" y1="20" x2="45" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="10" y1="65" x2="65" y2="65" stroke="#3DCC91" stroke-width="2.5"/>
+              <circle cx="65" cy="20" r="4" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">解放村カフェで朝の時間</div>
+            <div class="stop-tags"><span class="tag mint">CHILL</span></div>
+            <div class="stop-desc">
+              昨日Orioleでも見た解放村は、昼の顔が全く別物。<strong>古い民家を改造したカフェが点在するおしゃれエリア</strong>。Day2の疲れを取りつつ、ゆっくり朝を楽しむ。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">11:00</div>
+            <div class="end">〜12:00</div>
+            <div class="marker">7</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="28" y="10" width="24" height="60" fill="#5BC0EB" stroke="#1A1F3A" stroke-width="2"/>
+              <g stroke="#1A1F3A" stroke-width="0.8">
+                <line x1="28" y1="18" x2="52" y2="18"/>
+                <line x1="28" y1="26" x2="52" y2="26"/>
+                <line x1="28" y1="34" x2="52" y2="34"/>
+                <line x1="28" y1="42" x2="52" y2="42"/>
+                <line x1="28" y1="50" x2="52" y2="50"/>
+                <line x1="28" y1="58" x2="52" y2="58"/>
+                <line x1="36" y1="10" x2="36" y2="70"/>
+                <line x1="44" y1="10" x2="44" y2="70"/>
+              </g>
+              <rect x="28" y="4" width="24" height="8" fill="#1A1F3A"/>
+              <rect x="36" y="34" width="8" height="8" fill="#FFC53D"/>
+              <rect x="28" y="50" width="8" height="8" fill="#FFC53D"/>
+              <rect x="44" y="42" width="8" height="8" fill="#FFC53D"/>
+              <line x1="5" y1="70" x2="75" y2="70" stroke="#1A1F3A" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">ステートタワー南山｜長家本社<small>明洞駅徒歩2分</small></div>
+            <div class="stop-tags"><span class="tag">長家(チャンガ)本社</span></div>
+            <div class="stop-desc">
+              スアの勤務先、チャン会長の登場シーンで出てくる長家本社ビル。<strong>多くの韓ドラのロケ地でもある人気スポット</strong>。外観だけだが、明洞駅すぐで立ち寄りやすい。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">12:00</div>
+            <div class="end">〜13:30</div>
+            <div class="marker must">16</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="0" y="60" width="80" height="14" fill="#3DCC91" opacity="0.4"/>
+              <path d="M 5,60 L 5,50 L 15,50 L 15,45 L 25,45 L 25,50 L 35,50 L 35,45 L 45,45 L 45,50 L 55,50 L 55,45 L 65,45 L 65,50 L 75,50 L 75,60 Z" fill="#FF7849" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="5" y1="60" x2="75" y2="60" stroke="#1A1F3A" stroke-width="1.2"/>
+              <line x1="40" y1="45" x2="40" y2="15" stroke="#1A1F3A" stroke-width="2.5"/>
+              <ellipse cx="40" cy="25" rx="7" ry="4" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <rect x="38" y="10" width="4" height="6" fill="#1A1F3A"/>
+              <line x1="30" y1="65" x2="50" y2="65" stroke="#1A1F3A" stroke-width="2"/>
+              <text x="60" y="14" font-family="Meiryo UI" font-size="8" fill="#FFC53D">★</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">白凡（ペッボム）広場<small>会賢駅徒歩8分</small></div>
+            <div class="stop-tags"><span class="tag coral">最終回 ロケ地</span><span class="tag">CITY WALL</span></div>
+            <div class="stop-desc">
+              <strong>最終回でセロイとイソが初キスをした城壁の階段</strong>。城郭の向こうにNソウルタワーを望む絶景スポット。緑の芝生と城壁沿いの散策道。明洞から徒歩圏。
+            </div>
+            <div class="stop-quote">「代表の苦い夜を、甘くしてあげたかった」</div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">13:30</div>
+            <div class="end">〜15:00</div>
+            <div class="marker">🍴</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <path d="M 20,70 L 20,30 L 60,30 L 60,70 Z" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <path d="M 28,30 Q 28,18 40,18 Q 52,18 52,30" fill="none" stroke="#1A1F3A" stroke-width="2"/>
+              <circle cx="32" cy="45" r="2.5" fill="#FFC53D"/>
+              <circle cx="48" cy="45" r="2.5" fill="#FFC53D"/>
+              <path d="M 32,55 Q 40,62 48,55" fill="none" stroke="#FFC53D" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">明洞ランチ＋ショッピング</div>
+            <div class="stop-tags"><span class="tag pink">SHOPPING</span><span class="tag yellow">COSMETICS</span></div>
+            <div class="stop-desc">
+              コスメ・お土産仕込み。プデチゲやサムギョプサルなど明洞グルメも豊富。<strong>ロッテ百貨店地下の食品館で帰国用のお土産も</strong>。<strong>17時のリップアートメイクに備え、口紅は落としておく</strong>。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop travel">
+          <div class="stop-time">
+            <div class="t">15:30</div>
+            <div class="end">〜16:30</div>
+            <div class="marker travel">⇢</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="48" height="48">
+              <circle cx="40" cy="40" r="20" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="40" y1="25" x2="40" y2="40" stroke="#1A1F3A" stroke-width="2.5"/>
+              <line x1="40" y1="40" x2="50" y2="46" stroke="#FF3D7F" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            予約サロンへ移動。<strong>余裕を持って到着できるよう早めに出発</strong>。施術前にトイレ・水分補給も済ませておく。
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">17:00</div>
+            <div class="end">〜19:00</div>
+            <div class="marker must">💋</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <!-- Sparkle stars -->
+              <text x="6" y="18" font-family="Meiryo UI" font-size="12" fill="#FFC53D" font-weight="900">✦</text>
+              <text x="62" y="20" font-family="Meiryo UI" font-size="10" fill="#FFC53D" font-weight="900">✦</text>
+              <text x="55" y="68" font-family="Meiryo UI" font-size="9" fill="#FFC53D" font-weight="900">✦</text>
+              <!-- Upper lip -->
+              <path d="M 12,42 Q 22,30 32,40 Q 40,32 48,40 Q 58,30 68,42 Q 58,44 48,42 Q 40,44 32,42 Q 22,44 12,42 Z" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <!-- Lower lip -->
+              <path d="M 12,42 Q 22,58 40,58 Q 58,58 68,42 Q 58,50 40,52 Q 22,50 12,42 Z" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <!-- Highlights on lip -->
+              <ellipse cx="30" cy="40" rx="3" ry="1" fill="#FFF6E5"/>
+              <ellipse cx="50" cy="40" rx="3" ry="1" fill="#FFF6E5"/>
+              <ellipse cx="38" cy="52" rx="6" ry="1.5" fill="#FFF6E5" opacity="0.7"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">💋 リップアートメイク 予約<small>韓国美容の体験</small></div>
+            <div class="stop-tags"><span class="tag pink">RESERVED</span><span class="tag yellow">2時間</span><span class="tag purple">韓国美容</span></div>
+            <div class="stop-desc">
+              <strong>17:00〜19:00 予約済み</strong>。半永久メイクで、自然な血色感のあるリップを手に入れる旅の記念体験。施術直後は腫れ・赤み・かさぶたが2〜3日続くため、<strong>当日夜以降は辛い物・熱い物・アルコール・刺激物を避ける</strong>のが鉄則。色味が定着するのは1〜2週間後。
+            </div>
+            <div class="stop-quote">「梨泰院クラスの旅、自分への記念にもひとつ」</div>
+          </div>
+        </div>
+
+        <div class="stop travel">
+          <div class="stop-time">
+            <div class="t">19:00</div>
+            <div class="end">〜19:30</div>
+            <div class="marker travel">⇢</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="48" height="48">
+              <rect x="10" y="28" width="60" height="24" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2" rx="3"/>
+              <circle cx="22" cy="56" r="6" fill="#1A1F3A"/>
+              <circle cx="58" cy="56" r="6" fill="#1A1F3A"/>
+              <rect x="14" y="32" width="14" height="12" fill="#16C7BE"/>
+              <rect x="32" y="32" width="14" height="12" fill="#16C7BE"/>
+              <rect x="50" y="32" width="14" height="12" fill="#16C7BE"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            サロン → 弘大へタクシー移動（約20〜30分）。<strong>移動中は口元を冷やすケアを</strong>（保冷ジェルや冷えたペットボトル）。
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">19:30</div>
+            <div class="end">〜21:30</div>
+            <div class="marker">8</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="10" y="25" width="60" height="40" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+              <rect x="10" y="25" width="60" height="14" fill="#1A1F3A"/>
+              <text x="40" y="35" text-anchor="middle" fill="#FFC53D" font-family="Meiryo UI" font-size="8" font-weight="900">長家(チャンガ)</text>
+              <circle cx="20" cy="18" r="5" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <circle cx="40" cy="14" r="5" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <circle cx="60" cy="18" r="5" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="1.5"/>
+              <line x1="20" y1="23" x2="20" y2="25" stroke="#1A1F3A"/>
+              <line x1="40" y1="19" x2="40" y2="25" stroke="#1A1F3A"/>
+              <line x1="60" y1="23" x2="60" y2="25" stroke="#1A1F3A"/>
+              <rect x="35" y="45" width="10" height="20" fill="#1A1F3A"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">マンマンココロ 弘大店<small>長家・梨泰院店の外観ロケ地</small></div>
+            <div class="stop-tags"><span class="tag yellow">EP.中盤 ロケ地</span><span class="tag pink">DINNER</span><span class="tag purple">施術後ケア</span></div>
+            <div class="stop-desc">
+              <strong>スアが売上を回復させた長家・梨泰院店の外観</strong>として使われた居酒屋。24時間営業・年中無休、英語メニューあり。弘大入口駅9番出口徒歩5分。<br>
+              <strong>※ リップアートメイク施術後のため、辛い物・熱々の料理・アルコールは避ける</strong>。常温のお茶や水、冷ました料理を中心に、ぬるめで優しい食事に。ストローでの飲食がベター。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">22:00</div>
+            <div class="end">就寝</div>
+            <div class="marker hotel">H</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <circle cx="40" cy="40" r="22" fill="#FFC53D" stroke="#1A1F3A" stroke-width="2"/>
+              <path d="M 50,30 Q 55,40 50,50 Q 42,52 35,48 Q 32,40 38,32 Q 44,28 50,30 Z" fill="#1A1F3A"/>
+              <text x="14" y="18" font-family="Meiryo UI" font-size="8" fill="#FF3D7F">★</text>
+              <text x="62" y="62" font-family="Meiryo UI" font-size="8" fill="#16C7BE">★</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">タクシーでハミルトン帰還</div>
+            <div class="stop-desc">弘大→梨泰院はタクシー20分・₩10,000前後。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day day-4">
+      <div class="day-head">
+        <div class="num">04<small>DAY</small></div>
+        <div class="date">7月6日 月曜日<small>DEPARTURE · 締めと帰国</small></div>
+        <div class="theme">CLOSING · GO HOME</div>
+      </div>
+      <div class="timeline">
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">08:00</div>
+            <div class="end">〜10:30</div>
+            <div class="marker">☕</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="20" y="30" width="35" height="25" fill="#16C7BE" stroke="#1A1F3A" stroke-width="2" rx="2"/>
+              <path d="M 55,35 Q 65,40 55,50" fill="none" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="28" y1="22" x2="28" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="36" y1="20" x2="36" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="44" y1="22" x2="44" y2="28" stroke="#FF3D7F" stroke-width="2"/>
+              <line x1="5" y1="60" x2="75" y2="60" stroke="#1A1F3A" stroke-width="1.5"/>
+              <circle cx="65" cy="20" r="5" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">最後の梨泰院モーニング</div>
+            <div class="stop-tags"><span class="tag purple">CLOSING</span></div>
+            <div class="stop-desc">
+              ホテル朝食 or お気に入りカフェで締めの時間。<strong>緑莎坪陸橋にもう一度、朝の光で立ち寄って締めの一枚を撮るのもおすすめ</strong>。短時間で行ける距離。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">11:30</div>
+            <div class="end">〜12:00</div>
+            <div class="marker hotel">H</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="20" y="30" width="40" height="35" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <rect x="30" y="22" width="20" height="8" fill="none" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="40" y1="30" x2="40" y2="65" stroke="#1A1F3A" stroke-width="1.2"/>
+              <circle cx="30" cy="40" r="3" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+              <circle cx="50" cy="40" r="3" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">パッキング・チェックアウト</div>
+            <div class="stop-desc">忘れ物確認、ロビーで荷物預けも可。フロントでタクシー手配が確実。</div>
+          </div>
+        </div>
+
+        <div class="stop travel">
+          <div class="stop-time">
+            <div class="t">12:00</div>
+            <div class="end">〜13:30</div>
+            <div class="marker travel">⇢</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="48" height="48">
+              <rect x="10" y="30" width="60" height="22" fill="#FFC53D" stroke="#1A1F3A" stroke-width="1.5" rx="3"/>
+              <circle cx="22" cy="55" r="5" fill="#1A1F3A"/>
+              <circle cx="58" cy="55" r="5" fill="#1A1F3A"/>
+              <rect x="14" y="34" width="14" height="10" fill="#16C7BE"/>
+              <rect x="32" y="34" width="14" height="10" fill="#16C7BE"/>
+              <rect x="50" y="34" width="14" height="10" fill="#16C7BE"/>
+            </svg>
+          </div>
+          <div class="stop-body">
+            ハミルトン → 仁川空港。タクシー直行が安心（₩70,000前後・1時間〜1.5時間、月曜午後は空いている）。<strong>13:30までにICN到着を目安</strong>に。
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">13:30</div>
+            <div class="end">〜15:10</div>
+            <div class="marker">✈</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <path d="M 15,55 L 35,40 L 60,40 L 65,30 L 70,30 L 65,42 L 70,55 L 60,50 L 35,50 Z" fill="#FF3D7F" stroke="#1A1F3A" stroke-width="2"/>
+              <line x1="10" y1="65" x2="75" y2="65" stroke="#1A1F3A" stroke-width="0.8" stroke-dasharray="3 3"/>
+              <text x="40" y="20" text-anchor="middle" font-family="Meiryo UI" font-size="8" fill="#1A1F3A" font-weight="900">ICN</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">仁川空港 出国手続き・ラウンジ</div>
+            <div class="stop-tags"><span class="tag">CHECK-IN</span><span class="tag yellow">LOUNGE</span></div>
+            <div class="stop-desc">
+              チェックイン → 出国審査 → 免税。残ったウォンはWOWPASSなら日本円で引き出し可能。ラウンジまたは免税店で最後のショッピング。
+            </div>
+          </div>
+        </div>
+
+        <div class="stop">
+          <div class="stop-time">
+            <div class="t">15:10</div>
+            <div class="end">→ 17:30</div>
+            <div class="marker">✈</div>
+          </div>
+          <div class="stop-icon">
+            <svg viewBox="0 0 80 80" width="64" height="64">
+              <rect x="5" y="32" width="70" height="2" fill="#5BC0EB"/>
+              <polygon points="32,22 52,40 32,58 36,40" fill="#FF7849" stroke="#1A1F3A" stroke-width="1.5"/>
+              <text x="40" y="72" text-anchor="middle" font-family="Meiryo UI" font-size="9" fill="#1A1F3A" font-weight="900">ICN → NRT</text>
+            </svg>
+          </div>
+          <div class="stop-body">
+            <div class="stop-name">EASTAR JET｜ICN 15:10 → NRT 17:30</div>
+            <div class="stop-tags"><span class="tag coral">RETURN</span></div>
+            <div class="stop-desc">
+              2時間20分のフライト。<strong>機内で4日間の写真を2人で振り返る</strong>のが旅の締め。
+            </div>
+            <div class="stop-quote">「セロイの言葉、いつか自分の人生にも刻めるかな」</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ====== TIPS ====== -->
+  <section class="section s-tips">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <div class="section-title">TIPS｜旅のコツ</div>
+      <div class="section-sub">7月のソウル・聖地巡礼</div>
+    </div>
+
+    <div class="grid-3">
+      <div class="tip">
+        <div class="tip-num">TIP 01</div>
+        <h4>☀ 7月の天気・服装</h4>
+        <p>気温30度前後、梅雨明け前後で夕方スコールあり。<strong>軽量レインジャケット必須</strong>。日中は通気性のいい服、解放村は坂多めなので歩きやすい靴。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 02</div>
+        <h4>★ 緑莎坪陸橋は早朝</h4>
+        <p>Day2の朝7:30スタートは<strong>人少なく順光で写真最高</strong>。日中は暑く観光客も多い。1回目を朝、2回目を夕方の夜景でリピートするのもアリ。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 03</div>
+        <h4>📩 Oriole・The Finestは事前予約</h4>
+        <p>週末ピーク帯は混雑。<strong>Instagram DMで事前予約</strong>がおすすめ（@oriole_bar / @thefinest_lounge）。ルーフトップは特に夕景〜夜景の時間帯が争奪戦。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 04</div>
+        <h4>💳 決済はWOWPASSが便利</h4>
+        <p>仁川空港B1で発行。<strong>日本円でチャージ可能</strong>、交通カード・プリペイドカード・両替の3役。クレジットカード非対応の屋台や個人店も多いので必須レベル。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 05</div>
+        <h4>🚕 市内移動はタクシー</h4>
+        <p>Hirokiの普段通り、ソウル市内も<strong>タクシー多用がおすすめ</strong>。日本に比べ約半額、初乗り₩4,800（約500円）。配車アプリ「Kakao T」を事前にDL。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 06</div>
+        <h4>🤫 Plain Note は撮影短く</h4>
+        <p>営業中のウェディングスタジオ。<strong>敷地内には入らず、外の門と階段で短時間撮影</strong>。他のお客さんの撮影を邪魔しないよう配慮を。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 07</div>
+        <h4>📸 写真の撮り方</h4>
+        <p>ペア旅の利点は<strong>劇中再現ショットが2人で撮れる</strong>こと。緑莎坪陸橋ではNタワーを背景に、JACK'S BARでは天使の羽の前で、Orioleではルーフトップで乾杯ショット。三脚かミニ三脚があると◎。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 08</div>
+        <h4>💬 言語</h4>
+        <p>梨泰院は外国人多くて<strong>英語通じやすい</strong>。日本語メニューがある店も多い。翻訳はNAVER Papagoが韓→日に強い。Google翻訳のカメラ機能も看板読みに便利。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 09</div>
+        <h4>✅ 帰国前最終チェック</h4>
+        <p>免税書類、ウォン残高、機内に持ち込めないもの（液体100ml超など）の確認。<strong>Day4の朝のうちにパッキング完了させておく</strong>と、ホテル朝の時間を心置きなく楽しめる。</p>
+      </div>
+      <div class="tip">
+        <div class="tip-num">TIP 10</div>
+        <h4>💋 リップアートメイク後ケア</h4>
+        <p>Day3の17時施術。当日〜3日間は<strong>辛い物・熱い物・アルコール・刺激物NG</strong>。1週間はリップクリームで保湿、紫外線も避ける。<strong>かさぶたは絶対に剥がさない</strong>。色味の定着は1〜2週間後。Day4のフライト中は機内乾燥に注意してワセリンを携帯。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CHECKLIST ====== -->
+  <section class="section s-list">
+    <div class="section-head">
+      <div class="section-num">06</div>
+      <div class="section-title">CHECKLIST｜持ち物</div>
+      <div class="section-sub">PACKING LIST</div>
+    </div>
+
+    <div class="checklist">
+      <div class="col">
+        <h4>★ MUST｜必須</h4>
+        <ul>
+          <li>パスポート（6ヶ月以上有効）</li>
+          <li>航空券（eチケット）</li>
+          <li>ホテル予約確認書</li>
+          <li>クレジットカード（VISA/Master）</li>
+          <li>日本円 → ウォン両替分</li>
+          <li>WOWPASS / T-Money</li>
+          <li>iPhone・充電器</li>
+          <li>変換プラグ（C型）</li>
+          <li>モバイルバッテリー</li>
+          <li>常備薬</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>○ SHOULD｜あると便利</h4>
+        <ul>
+          <li>軽量レインジャケット</li>
+          <li>折りたたみ傘</li>
+          <li>歩きやすい靴（坂対応）</li>
+          <li>サングラス</li>
+          <li>日焼け止め</li>
+          <li>制汗シート</li>
+          <li>ミニ三脚（写真用）</li>
+          <li>エコバッグ（買い物用）</li>
+          <li>💋 ワセリン・リップクリーム</li>
+          <li>💋 ストロー（数本）</li>
+          <li>機内用エアピロー</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>📱 APP｜入れておくアプリ</h4>
+        <ul>
+          <li>Kakao T（タクシー配車）</li>
+          <li>NAVER Map（地下鉄・徒歩）</li>
+          <li>Papago（翻訳）</li>
+          <li>Klook（ツアー予約）</li>
+          <li>Marriott Bonvoy</li>
+          <li>Instagram（店予約DM）</li>
+          <li>Google マップ（オフライン保存）</li>
+          <li>WOWPASS（残高確認）</li>
+          <li>Apple Wallet（航空券）</li>
+          <li>Yahoo!天気（日本側）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <div class="footer">
+    <div>★ ITAEWON CLASS PILGRIMAGE　·　2026.7.3 — 7.6　·　Hiroki &amp; Rie ★</div>
+    <div class="quote">"所信に対価がないような人生を生きたい"</div>
+  </div>
+
+</div>
+
+</body>
+</html>
