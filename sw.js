@@ -1,5 +1,5 @@
 // Service Worker for 梨泰院クラス聖地巡礼 旅のしおり
-const CACHE = 'itaewon-trip-v3';
+const CACHE = 'itaewon-trip-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -20,7 +20,20 @@ const ASSETS = [
   './spots/oriole.html',
   './spots/sky-tower-namsan.html',
   './spots/baekak.html',
-  './spots/nandong-konkoro.html'
+  './spots/nandong-konkoro.html',
+  './spots/photos/world-gourmet-street.jpg',
+  './spots/photos/jacks-bar.jpg',
+  './spots/photos/kkulbam.jpg',
+  './spots/photos/noksapyeong-bridge.jpg',
+  './spots/photos/club-pumpkin.jpg',
+  './spots/photos/g-guesthouse.jpg',
+  './spots/photos/seoulpam.jpg',
+  './spots/photos/itaewon-park.jpg',
+  './spots/photos/plain-note.jpg',
+  './spots/photos/oriole.jpg',
+  './spots/photos/sky-tower-namsan.jpg',
+  './spots/photos/baekak.jpg',
+  './spots/photos/nandong-konkoro.jpg'
 ];
 
 self.addEventListener('install', (e) => {
