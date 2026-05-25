@@ -1,5 +1,5 @@
 // Service Worker for 梨泰院クラス聖地巡礼 旅のしおり
-const CACHE = 'itaewon-trip-v2';
+const CACHE = 'itaewon-trip-v3';
 const ASSETS = [
   './',
   './index.html',
@@ -48,15 +48,27 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // Cache-first for own assets
-  if (url.origin === self.location.origin) {
+  if (url.origin !== self.location.origin) return;
+
+  // Network-first for HTML (so updates show without manual reload)
+  const isHTML = req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html');
+  if (isHTML) {
     e.respondWith(
-      caches.match(req).then((cached) => cached || fetch(req).then((res) => {
+      fetch(req).then((res) => {
         const copy = res.clone();
         caches.open(CACHE).then((c) => c.put(req, copy));
         return res;
-      }).catch(() => caches.match('./index.html')))
+      }).catch(() => caches.match(req).then((c) => c || caches.match('./index.html')))
     );
     return;
   }
+
+  // Cache-first for other assets (css, images, manifest)
+  e.respondWith(
+    caches.match(req).then((cached) => cached || fetch(req).then((res) => {
+      const copy = res.clone();
+      caches.open(CACHE).then((c) => c.put(req, copy));
+      return res;
+    }))
+  );
 });
