@@ -1011,12 +1011,51 @@
     .section, .day { opacity: 1 !important; transform: none !important; }
   }
 
+  /* ===== Day OST (Spotify embed) ===== */
+  .day-ost {
+    background: var(--navy);
+    border-left: 2px solid var(--navy);
+    border-right: 2px solid var(--navy);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .day-ost-label {
+    flex-shrink: 0;
+    color: var(--yellow);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    min-width: 78px;
+  }
+  .day-ost-label small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+    margin-top: 3px;
+    font-weight: 700;
+  }
+  .day-ost-frame {
+    flex: 1;
+    border: 0;
+    border-radius: 8px;
+    min-width: 0;
+    height: 80px;
+  }
+  @media (max-width: 600px) {
+    .day-ost { flex-direction: column; align-items: stretch; gap: 8px; padding: 10px 12px; }
+    .day-ost-label { min-width: 0; text-align: center; }
+  }
+
   /* Print */
   @media print {
     body { background: white; padding: 0; }
     .page { border: none; box-shadow: none; }
     .section { page-break-inside: avoid; opacity: 1 !important; transform: none !important; }
-    .countdown-banner, .section.s-live { display: none; }
+    .countdown-banner, .section.s-live, .day-ost { display: none; }
   }
 </style>
 </head>
@@ -1483,6 +1522,10 @@
         <div class="date">7月3日 金曜日<small>ARRIVAL · 到着＆夜の梨泰院ライト散策</small></div>
         <div class="theme">ARRIVE &amp; WANDER</div>
       </div>
+      <div class="day-ost">
+        <div class="day-ost-label">🎵 BGM<small>SWEET NIGHT / V</small></div>
+        <iframe class="day-ost-frame" src="https://open.spotify.com/embed/track/3ljnXq6R4tlsoLcR094nUI?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <div class="timeline">
 
         <div class="stop travel">
@@ -1672,6 +1715,10 @@
         <div class="num">02<small>DAY</small></div>
         <div class="date">7月4日 土曜日<small>PILGRIMAGE CORE · 聖地巡礼コアデー</small></div>
         <div class="theme">★ MAIN EVENT</div>
+      </div>
+      <div class="day-ost">
+        <div class="day-ost-label">🎵 BGM<small>START OVER / Gaho</small></div>
+        <iframe class="day-ost-frame" src="https://open.spotify.com/embed/track/3e4tHEcyzEtngkCw8ZBSMS?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="timeline">
 
@@ -1937,6 +1984,10 @@
         <div class="date">7月5日 日曜日<small>EXTENDED · 明洞・南山・弘大 拡張デー</small></div>
         <div class="theme">EXPLORE BEYOND</div>
       </div>
+      <div class="day-ost">
+        <div class="day-ost-label">🎵 BGM<small>DIAMOND / Ha Hyun Woo</small></div>
+        <iframe class="day-ost-frame" src="https://open.spotify.com/embed/track/5Ts430nKhjGr3ZUnPAQCgh?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <div class="timeline">
 
         <div class="stop">
@@ -2185,6 +2236,10 @@
         <div class="num">04<small>DAY</small></div>
         <div class="date">7月6日 月曜日<small>DEPARTURE · 締めと帰国</small></div>
         <div class="theme">CLOSING · GO HOME</div>
+      </div>
+      <div class="day-ost">
+        <div class="day-ost-label">🎵 BGM<small>NO WORDS / Crush</small></div>
+        <iframe class="day-ost-frame" src="https://open.spotify.com/embed/track/7swBBMpW5XH6M3NTklhvUX?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="timeline">
 
