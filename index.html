@@ -1011,76 +1011,111 @@
     .section, .day { opacity: 1 !important; transform: none !important; }
   }
 
-  /* ===== OST Hero (Start Over: tap-to-play banner) ===== */
+  /* ===== OST Hero (Mystery tap-to-start) ===== */
   .ost-hero {
     background: var(--navy);
     border-bottom: 2px solid var(--navy);
-    padding: 22px 32px;
-    display: flex;
-    align-items: center;
-    gap: 22px;
+    padding: 28px 32px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
   }
   .ost-hero::before {
     content: "🎵";
     position: absolute;
-    font-size: 200px;
-    top: -36px;
-    right: -28px;
-    opacity: 0.07;
+    font-size: 220px;
+    top: -44px;
+    right: -32px;
+    opacity: 0.06;
     pointer-events: none;
     line-height: 1;
   }
-  .ost-hero-label {
-    flex: 0 0 auto;
-    color: var(--paper);
-    min-width: 220px;
+  .ost-mystery-btn {
     position: relative;
     z-index: 1;
-  }
-  .ost-hero-tap {
-    color: var(--paper);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 0.25em;
+    width: 100%;
+    max-width: 580px;
     background: var(--pink);
-    display: inline-block;
-    padding: 5px 12px;
-    margin-bottom: 10px;
-    border: 2px solid var(--yellow);
-    animation: ostPulse 2.2s ease-in-out infinite;
+    color: var(--paper);
+    border: 3px solid var(--yellow);
+    padding: 26px 32px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: inherit;
+    text-align: center;
+    animation: ostPulse 2.4s ease-in-out infinite;
+    transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.15s;
   }
-  @keyframes ostPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 197, 61, 0.55); }
-    50% { box-shadow: 0 0 0 12px rgba(255, 197, 61, 0); }
+  .ost-mystery-btn:hover {
+    background: var(--yellow);
+    color: var(--navy);
+    transform: translate(-2px, -2px);
   }
-  .ost-hero-track {
-    font-size: 26px;
+  .ost-mystery-btn:active {
+    transform: translate(2px, 2px);
+  }
+  .ost-mystery-label {
+    font-size: 12px;
     font-weight: 900;
-    letter-spacing: 0.04em;
-    color: var(--yellow);
-    line-height: 1.15;
+    letter-spacing: 0.35em;
+    padding-bottom: 8px;
+    border-bottom: 2px solid currentColor;
     margin-bottom: 4px;
   }
-  .ost-hero-artist {
-    font-size: 12px;
-    color: rgba(255, 246, 229, 0.75);
-    letter-spacing: 0.06em;
-    font-weight: 700;
+  .ost-mystery-title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
   }
-  .ost-hero-frame {
-    flex: 1;
-    border: 0;
-    border-radius: 12px;
-    height: 152px;
-    min-width: 0;
+  .ost-mystery-sub {
+    font-size: 11.5px;
+    font-weight: 700;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    margin-top: 6px;
+  }
+  .ost-mystery-icon {
+    font-size: 34px;
+    margin-top: 10px;
+    line-height: 1;
+  }
+
+  @keyframes ostPulse {
+    0%, 100% { box-shadow: 4px 4px 0 var(--yellow), 0 0 0 0 rgba(255, 197, 61, 0.55); }
+    50% { box-shadow: 4px 4px 0 var(--yellow), 0 0 0 16px rgba(255, 197, 61, 0); }
+  }
+
+  .ost-embed-container {
+    display: none;
+    width: 100%;
+    max-width: 580px;
     position: relative;
     z-index: 1;
+    border-radius: 12px;
+    overflow: hidden;
   }
-  @media (max-width: 900px) {
-    .ost-hero { flex-direction: column; align-items: stretch; gap: 12px; padding: 18px 22px; }
-    .ost-hero-label { min-width: 0; text-align: center; }
+  .ost-hero.revealed .ost-mystery-btn { display: none; }
+  .ost-hero.revealed .ost-embed-container {
+    display: block;
+    animation: ostReveal 0.6s ease-out;
+  }
+  @keyframes ostReveal {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .ost-hero { padding: 22px 16px; min-height: 180px; }
+    .ost-mystery-btn { padding: 22px 18px; }
+    .ost-mystery-title { font-size: 22px; }
   }
 
   /* ===== Day OST (Spotify embed) ===== */
@@ -1209,18 +1244,15 @@
     </div>
   </section>
 
-  <!-- ====== OST HERO (Tap-to-start) ====== -->
-  <section class="ost-hero" aria-label="梨泰院クラス OST 主題歌">
-    <div class="ost-hero-label">
-      <div class="ost-hero-tap">▶ TAP TO START</div>
-      <div class="ost-hero-track">START OVER</div>
-      <div class="ost-hero-artist">— Gaho · 梨泰院クラス OST 主題歌</div>
-    </div>
-    <iframe class="ost-hero-frame"
-      src="https://open.spotify.com/embed/track/3e4tHEcyzEtngkCw8ZBSMS?utm_source=generator&theme=0"
-      loading="eager"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      allowfullscreen></iframe>
+  <!-- ====== OST HERO (Mystery: tap reveals song) ====== -->
+  <section class="ost-hero" aria-label="この旅のテーマ曲">
+    <button class="ost-mystery-btn" id="ost-mystery-btn" type="button" aria-label="この旅のテーマ曲を再生する">
+      <div class="ost-mystery-label">▶ TAP TO START</div>
+      <div class="ost-mystery-title">この旅の<br>テーマ曲</div>
+      <div class="ost-mystery-sub">何が流れるかは、押してからのお楽しみ</div>
+      <div class="ost-mystery-icon">▶</div>
+    </button>
+    <div id="ost-embed-container" class="ost-embed-container"></div>
   </section>
 
   <!-- ====== FLIGHT ====== -->
@@ -2750,8 +2782,28 @@
       navigator.serviceWorker.register('sw.js').catch(() => {});
     });
   }
+
+  // ===== OST Hero: Spotify iFrame API (mystery tap-to-play) =====
+  window.onSpotifyIframeApiReady = function (IFrameAPI) {
+    const container = document.getElementById('ost-embed-container');
+    if (!container) return;
+    IFrameAPI.createController(container, {
+      width: '100%',
+      height: '152',
+      uri: 'spotify:track:3e4tHEcyzEtngkCw8ZBSMS'
+    }, function (EmbedController) {
+      const btn = document.getElementById('ost-mystery-btn');
+      const hero = document.querySelector('.ost-hero');
+      if (!btn || !hero) return;
+      btn.addEventListener('click', function () {
+        EmbedController.play();
+        hero.classList.add('revealed');
+      }, { once: true });
+    });
+  };
 })();
 </script>
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 
 </body>
 </html>
